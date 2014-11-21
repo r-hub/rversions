@@ -1,0 +1,22 @@
+
+```{r, setup, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  tidy = FALSE,
+  error = FALSE)
+```
+
+# rversions — query which versions R-release and R-oldrel refer to
+
+## Installation
+
+```{r}
+devtools::install_github("metacran/rversions")
+```
+
+## Usage
+
+```{r}
+library(rversions)
+r_versions()
+```
