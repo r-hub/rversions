@@ -6,6 +6,9 @@ knitr::opts_chunk$set(
   error = FALSE)
 ```
 
+[![Linux Build Status](https://travis-ci.org/metacran/rversions.png?branch=master)](https://travis-ci.org/metacran/rversions)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions)](https://ci.appveyor.com/project/metacran/rversions)
+
 # rversions — query which versions R-release and R-oldrel refer to
 
 ## Installation
