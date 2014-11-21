@@ -20,3 +20,7 @@ devtools::install_github("metacran/rversions")
 library(rversions)
 r_versions()
 ```
+
+## License
+
+MIT
