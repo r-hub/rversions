@@ -26,4 +26,4 @@ r_versions()
 
 ## License
 
-MIT
+MIT © [Gabor Csardi](http://gaborcsardi.org)
