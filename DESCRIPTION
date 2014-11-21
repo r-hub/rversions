@@ -1,0 +1,12 @@
+Package: rversions
+Title: Query the Latest Version of R
+Version: 1.0.0
+Authors@R: "Gabor Csardi <csardi.gabor@gmail.com> [aut, cre]"
+Description: Query the versions R-release. and R-oldrel
+    refer to.
+License: MIT + file LICENSE
+URL: https://github.com/metacran/rversions
+BugReports: https://github.com/metacran/rversions/issues
+Imports:
+    magrittr,
+    RCurl
