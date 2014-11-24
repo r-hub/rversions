@@ -9,21 +9,30 @@ knitr::opts_chunk$set(
 [![Linux Build Status](https://travis-ci.org/metacran/rversions.png?branch=master)](https://travis-ci.org/metacran/rversions)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions)](https://ci.appveyor.com/project/metacran/rversions)
 
-# rversions — query which versions R-release and R-oldrel refer to
+# rversions — past and present R versions
 
 ## Installation
 
-```{r}
+```{r eval = FALSE}
 devtools::install_github("metacran/rversions")
 ```
 
 ## Usage
 
+### R-release and R-oldrel
+
 ```{r}
 library(rversions)
+r_release()
+r_oldrel()
+```
+
+### All R versions and release dates
+
+```{r}
 r_versions()
 ```
 
 ## License
 
-MIT © [Gabor Csardi](http://gaborcsardi.org)
+MIT © [Gábor Csárdi](http://gaborcsardi.org)

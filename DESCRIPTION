@@ -8,5 +8,5 @@ License: MIT + file LICENSE
 URL: https://github.com/metacran/rversions
 BugReports: https://github.com/metacran/rversions/issues
 Imports:
-    magrittr,
-    RCurl
+    RCurl,
+    XML

@@ -1,85 +1,99 @@
 
-#' Query which versions R-release and R-oldrel refer to
+#' Query R's past and present versions
 #'
 #' R version numbers consist of three numbers (since version 1.4.1):
 #' major, minor and patch.
-#' 
-#' We use the latest (in terms of versions numbers) tag in the
-#' R SVN repository to determine R-release.
 #'
-#' For R-oldrel, the latest version of the previous minor version
-#' is used, again, based on the SVN repo.
+#' We extract the version numbers from the tags in the SVN repository.
 #'
-#' @return A named character vector with entries \code{release} and
-#' \code{oldrel}.
+#' @param dots Whether to use dots instead of dashes in the version
+#'   number.
+#' @return A list, where each entry is an R version and has two
+#'   entries: \sQuote{version} is the version number itself,
+#'   \sQuote{date} is the exact date and time when this R version was
+#'   released.
 #'
 #' @export
 #' @importFrom RCurl getURLContent
-#' @importFrom magrittr %>%
+#' @importFrom XML xmlParse xmlRoot xmlChildren xpathApply xmlValue
 #' @examples
 #' r_versions()
 
-r_versions <- function() {
-  
-  ## Get the tag info from SVN
-  tags <- getURLContent(
-    "http://svn.r-project.org/R/tags/",
-    customrequest = "PROPFIND",
-    httpheader=c("Depth"="1")
-  ) %>%
-    get_tags()
+r_versions <- function(dots = TRUE) {
 
-  ## Extract versions numbers from tags and sort them
-  versions <-  tags %>%
-    sub(pattern = "/R/tags/R-([^/]+)/", replacement = "\\1") %>%
-    grep(pattern = "^[0-9]+-[0-9]+(-[0-9]+|)$", value = TRUE) %>%
-    sort_tags()
+  props<- getURLContent("http://svn.r-project.org/R/tags/",
+                       customrequest = "PROPFIND",
+                       httpheader=c("Depth"="1") )
+  props <- xmlParse(props)
+  props <- xmlRoot(props)
+  props <- xmlChildren(props)
+  props <- lapply(props, get_props)
+  props <- unname(props)
 
-  ## Relase is easy, most recent
-  release <- tail(versions, 1)
+  tags <- sapply(props, get_tags)
+  tags <- sub("^.*/tags/R-([-0-9]+).*$", "\\1", tags)
 
-  ## Oldrel is latest from the previous minor
-  ## (Careful with factors, they are ordered by default!)
-  oldrel <- versions %>%
-    sub(pattern = "-[0-9]+$", replacement = "") %>%
-    factor(levels = unique(.)) %>%
-    tapply(X = versions, FUN = tail, 1) %>%
-    tail(2) %>%
-    head(1) %>%
-    unname()
+  dates <- sapply(props, get_dates)
 
-  c(release = release, oldrel = oldrel) %>%
-    gsub(pattern = "-", replacement = ".")
+  versions <- grepl("^[0-9]+-[0-9]+(-[0-9]+|)$", tags)
+  tags <- tags[versions]
+  dates <- dates[versions]
+
+  if (dots) tags <- gsub('-', '.', tags)
+
+  versions <- mapply(FUN = list, version = tags, date = dates,
+                     SIMPLIFY = FALSE)
+  versions <- versions[order(package_version(tags))]
+
+  versions
 }
 
-get_tags <- function(xml) {
-  xml2 <- xml %>%
-    gsub(pattern = "<D:propstat>(.*?)</D:propstat>", replacement = "")
+#' Version number of R-release
+#'
+#' The latest tag in the SVN repository (in terms of version numbers,
+#' not dates).
+#'
+#' @inheritParams r_versions
+#'
+#' @export
+#' @examples
+#' r_release()
 
-  matches <- xml2 %>%
-    gregexpr(pattern = "<D:href>[^<]+</D:href>")
-
-  regmatches(xml2, matches)[[1]] %>%
-    sub(pattern = "<D:href>", replacement = "") %>%
-    sub(pattern = "</D:href>", replacement = "")
-}
-  
-## Split a version number to major, minor, patch
-split_versions <- function(x) {
-  x %>%
-    sub(pattern = "^([0-9]+-[0-9]+)$", replacement = "\\1-0") %>%
-    strsplit(split = "-") %>%
-    sapply(as.numeric)
+r_release <- function(dots = TRUE) {
+  tail(r_versions(dots), 1)[[1]]
 }
 
-## Sort version numbers
-sort_tags <- function(x) {
-  x_order <- x %>%
-    split_versions() %>%
-    apply(1, list) %>%
-    lapply("[[", 1) %>%
-    do.call(what = order)
-  x [x_order]
+
+#' Version number of R-oldrel
+#'
+#' R-oldrel is the latest version of the previous minor version.
+#' We extract version numbers from the R SVN repository tags.
+#'
+#' @inheritParams r_versions
+#'
+#' @export
+#' @examples
+#' r_oldrel()
+
+r_oldrel <- function(dots = TRUE) {
+
+  versions <- r_versions(dots)
+
+  version_strs <- package_version(names(versions))
+
+  major <- version_strs$major
+  minor <- version_strs$minor
+  major_minor <- paste(major, sep = ".", minor)
+
+  latest <- tail(major_minor, 1)
+  tail(versions[ major_minor != latest ], 1)[[1]]
 }
 
-. <- "Looking for job offers"
+
+get_props <- function(x) unname(x[["propstat"]][["prop"]])
+
+
+get_tags <- function(x) unname(xmlValue(x[["getetag"]]))
+
+
+get_dates <- function(x) unname(xmlValue(x[["creationdate"]]))
