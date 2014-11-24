@@ -45,6 +45,7 @@ r_versions <- function(dots = TRUE) {
     date = dates
   )
   versions <- versions[order(package_version(tags)), ]
+  rownames(versions) <- NULL
   versions
 }
 
