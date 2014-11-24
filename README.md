@@ -6,6 +6,9 @@
 
 # rversions — past and present R versions
 
+The R vesion numbers and dates are extracted from the
+main R SVN repository at http://svn.r-project.org/R/.
+
 ## Installation
 
 
