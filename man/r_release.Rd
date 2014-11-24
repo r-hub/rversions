@@ -9,6 +9,10 @@ r_release(dots = TRUE)
 \item{dots}{Whether to use dots instead of dashes in the version
 number.}
 }
+\value{
+A one row data frame, with columns \sQuote{version} and
+  \sQuote{date}.
+}
 \description{
 The latest tag in the SVN repository (in terms of version numbers,
 not dates).

@@ -10,10 +10,8 @@ r_versions(dots = TRUE)
 number.}
 }
 \value{
-A list, where each entry is an R version and has two
-  entries: \sQuote{version} is the version number itself,
-  \sQuote{date} is the exact date and time when this R version was
-  released.
+A data frame with two chracter columns: \sQuote{version} and
+  \sQuote{date}.
 }
 \description{
 R version numbers consist of three numbers (since version 1.4.1):

@@ -9,6 +9,10 @@ r_oldrel(dots = TRUE)
 \item{dots}{Whether to use dots instead of dashes in the version
 number.}
 }
+\value{
+A one row data frame, with columns \sQuote{version} and
+  \sQuote{date}.
+}
 \description{
 R-oldrel is the latest version of the previous minor version.
 We extract version numbers from the R SVN repository tags.

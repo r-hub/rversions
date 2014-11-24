@@ -8,10 +8,8 @@
 #'
 #' @param dots Whether to use dots instead of dashes in the version
 #'   number.
-#' @return A list, where each entry is an R version and has two
-#'   entries: \sQuote{version} is the version number itself,
-#'   \sQuote{date} is the exact date and time when this R version was
-#'   released.
+#' @return A data frame with two chracter columns: \sQuote{version} and
+#'   \sQuote{date}.
 #'
 #' @export
 #' @importFrom RCurl getURLContent
@@ -41,10 +39,12 @@ r_versions <- function(dots = TRUE) {
 
   if (dots) tags <- gsub('-', '.', tags)
 
-  versions <- mapply(FUN = list, version = tags, date = dates,
-                     SIMPLIFY = FALSE)
-  versions <- versions[order(package_version(tags))]
-
+  versions <- data.frame(
+    stringsAsFactors = FALSE,
+    version = tags,
+    date = dates
+  )
+  versions <- versions[order(package_version(tags)), ]
   versions
 }
 
@@ -54,13 +54,15 @@ r_versions <- function(dots = TRUE) {
 #' not dates).
 #'
 #' @inheritParams r_versions
+#' @return A one row data frame, with columns \sQuote{version} and
+#'   \sQuote{date}.
 #'
 #' @export
 #' @examples
 #' r_release()
 
 r_release <- function(dots = TRUE) {
-  tail(r_versions(dots), 1)[[1]]
+  tail(r_versions(dots), 1)
 }
 
 
@@ -70,6 +72,8 @@ r_release <- function(dots = TRUE) {
 #' We extract version numbers from the R SVN repository tags.
 #'
 #' @inheritParams r_versions
+#' @return A one row data frame, with columns \sQuote{version} and
+#'   \sQuote{date}.
 #'
 #' @export
 #' @examples
@@ -79,14 +83,14 @@ r_oldrel <- function(dots = TRUE) {
 
   versions <- r_versions(dots)
 
-  version_strs <- package_version(names(versions))
+  version_strs <- package_version(versions$version)
 
   major <- version_strs$major
   minor <- version_strs$minor
   major_minor <- paste(major, sep = ".", minor)
 
   latest <- tail(major_minor, 1)
-  tail(versions[ major_minor != latest ], 1)[[1]]
+  tail(versions[ major_minor != latest, ], 1)
 }
 
 
