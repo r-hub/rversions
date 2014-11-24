@@ -20,8 +20,9 @@
 r_versions <- function(dots = TRUE) {
 
   props<- getURLContent("http://svn.r-project.org/R/tags/",
-                       customrequest = "PROPFIND",
-                       httpheader=c("Depth"="1") )
+                        customrequest = "PROPFIND",
+                        httpheader=c("Depth"="1"),
+                        followlocation = 0L)
   props <- xmlParse(props)
   props <- xmlRoot(props)
   props <- xmlChildren(props)
