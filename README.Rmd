@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 ```
 
 [![Linux Build Status](https://travis-ci.org/metacran/rversions.png?branch=master)](https://travis-ci.org/metacran/rversions)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions)](https://ci.appveyor.com/project/metacran/rversions)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions)](https://ci.appveyor.com/project/gaborcsardi/rversions)
 
 # rversions — past and present R versions
 
