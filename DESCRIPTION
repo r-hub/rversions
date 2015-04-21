@@ -1,9 +1,10 @@
 Package: rversions
-Title: Query the Latest Version of R
+Title: Query R Versions, Including r-release and r-oldrel
 Version: 1.0.0
-Authors@R: "Gabor Csardi <csardi.gabor@gmail.com> [aut, cre]"
-Description: Query the versions R-release. and R-oldrel
-    refer to.
+Authors@R: person("Gabor", "Csardi", , "csardi.gabor@gmail.com", role = c("aut", "cre"))
+Description: Query the main R SVN repository to find the versions r-release
+    and r-oldrel refer to, and also all previous R versions and
+    their release dates.
 License: MIT + file LICENSE
 URL: https://github.com/metacran/rversions
 BugReports: https://github.com/metacran/rversions/issues
