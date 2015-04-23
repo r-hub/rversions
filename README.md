@@ -2,7 +2,8 @@
 
 
 [![Linux Build Status](https://travis-ci.org/metacran/rversions.png?branch=master)](https://travis-ci.org/metacran/rversions)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions)](https://ci.appveyor.com/project/gaborcsardi/rversions)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
+[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rversions)
 
 # rversions — past and present R versions
 
