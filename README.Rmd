@@ -8,7 +8,8 @@ knitr::opts_chunk$set(
 
 [![Linux Build Status](https://travis-ci.org/metacran/rversions.svg?branch=master)](https://travis-ci.org/metacran/rversions)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rversions)](http://cran.r-project.org/web/packages/rversions/index.html)
+[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rversions)](http://cran.rstudio.com/web/packages/rversions/index.html)
+[![CRAN version](http://www.r-pkg.org/badges/version/rversions)](http://cran.rstudio.com/web/packages/rversions/index.html)
 
 # rversions — past and present R versions
 
