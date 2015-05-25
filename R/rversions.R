@@ -38,8 +38,7 @@ r_versions <- function(dots = TRUE) {
   dates <- dates[is_release]
   
   # use dots for versions
-  if (dots) 
-    tags <- gsub('-', '.', tags)
+  if (dots) tags <- gsub('-', '.', tags)
   
   # output structure
   versions <- data.frame(
