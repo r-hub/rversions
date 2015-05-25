@@ -12,41 +12,45 @@
 #'   \sQuote{date}.
 #'
 #' @export
-#' @importFrom RCurl getURLContent
-#' @importFrom XML xmlParse xmlRoot xmlChildren xpathApply xmlValue
+#' @importFrom curl new_handle handle_setheaders curl_fetch_memory
+#' @importFrom xml2 read_xml xml_find_all xml_ns xml_find_one xml_text
 #' @examples
 #' r_versions()
 
 r_versions <- function(dots = TRUE) {
-
-  props<- getURLContent("http://svn.r-project.org/R/tags/",
-                       customrequest = "PROPFIND",
-                       httpheader=c("Depth"="1") )
-  props <- xmlParse(props)
-  props <- xmlRoot(props)
-  props <- xmlChildren(props)
-  props <- lapply(props, get_props)
-  props <- unname(props)
-
-  tags <- sapply(props, get_tags)
+  
+  # issue http request to svn
+  h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth="1")
+  req <- curl_fetch_memory("http://svn.r-project.org/R/tags/", handle = h)
+  
+  # extract xml nodes
+  doc <- read_xml(rawToChar(req$content))
+  prop <- xml_find_all(doc, ".//D:propstat/D:prop", xml_ns(doc))
+  
+  # extract dates and tages
+  dates <- xml_text(xml_find_one(prop, ".//D:creationdate", xml_ns(doc)))
+  tags <- xml_text(xml_find_one(prop, ".//D:getetag", xml_ns(doc)))
   tags <- sub("^.*/tags/R-([-0-9]+).*$", "\\1", tags)
-
-  dates <- sapply(props, get_dates)
-
-  versions <- grepl("^[0-9]+-[0-9]+(-[0-9]+|)$", tags)
-  tags <- tags[versions]
-  dates <- dates[versions]
-
+  
+  # filter out working branches
+  is_release <- grepl("^[0-9]+-[0-9]+(-[0-9]+|)$", tags)
+  tags <- tags[is_release]
+  dates <- dates[is_release]
+  
+  # use dots for versions
   if (dots) tags <- gsub('-', '.', tags)
-
+  
+  # output structure
   versions <- data.frame(
     stringsAsFactors = FALSE,
     version = tags,
     date = dates
   )
-  versions <- versions[order(package_version(tags)), ]
-  rownames(versions) <- NULL
-  versions
+  
+  # sort and return
+  df <- versions[order(package_version(tags)), ]
+  rownames(df) <- NULL
+  df
 }
 
 #' Version number of R-release
@@ -93,12 +97,3 @@ r_oldrel <- function(dots = TRUE) {
   latest <- tail(major_minor, 1)
   tail(versions[ major_minor != latest, ], 1)
 }
-
-
-get_props <- function(x) unname(x[["propstat"]][["prop"]])
-
-
-get_tags <- function(x) unname(xmlValue(x[["getetag"]]))
-
-
-get_dates <- function(x) unname(xmlValue(x[["creationdate"]]))
