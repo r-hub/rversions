@@ -63,6 +63,7 @@ r_versions <- function(dots = TRUE) {
 #'   \sQuote{date}.
 #'
 #' @export
+#' @importFrom utils tail
 #' @examples
 #' r_release()
 
@@ -81,6 +82,7 @@ r_release <- function(dots = TRUE) {
 #'   \sQuote{date}.
 #'
 #' @export
+#' @importFrom utils tail
 #' @examples
 #' r_oldrel()
 
