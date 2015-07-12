@@ -1,5 +1,6 @@
 
 language: c
+sudo: required
 
 before_install:
   - curl -OL https://raw.githubusercontent.com/metacran/r-builder/master/pkg-build.sh
@@ -23,8 +24,8 @@ notifications:
 
 env:
   matrix:
-    - RVERSION=3.1.0
-    - RVERSION=3.1.1
-    - RVERSION=3.1.2
+    - RVERSION=oldrel
+    - RVERSION=release
     - RVERSION=devel
-#    - RVERSION=3.0.3
+  global:
+    - NOT_CRAN=1
