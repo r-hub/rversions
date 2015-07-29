@@ -19,7 +19,7 @@ main R SVN repository at http://svn.r-project.org/R/.
 ## Installation
 
 ```{r eval = FALSE}
-devtools::install_github("metacran/rversions")
+install.packages("rversions")
 ```
 
 ## Usage
