@@ -13,7 +13,7 @@
 #'
 #' @export
 #' @importFrom curl new_handle handle_setheaders curl_fetch_memory
-#' @importFrom xml2 read_xml xml_find_all xml_ns xml_find_one xml_text
+#' @importFrom xml2 read_xml xml_find_all xml_ns xml_find_first xml_text
 #' @examples
 #' r_versions()
 
@@ -28,8 +28,8 @@ r_versions <- function(dots = TRUE) {
   prop <- xml_find_all(doc, ".//D:propstat/D:prop", xml_ns(doc))
   
   # extract dates and tages
-  dates <- xml_text(xml_find_one(prop, ".//D:creationdate", xml_ns(doc)))
-  tags <- xml_text(xml_find_one(prop, ".//D:getetag", xml_ns(doc)))
+  dates <- xml_text(xml_find_first(prop, ".//D:creationdate", xml_ns(doc)))
+  tags <- xml_text(xml_find_first(prop, ".//D:getetag", xml_ns(doc)))
   tags <- sub("^.*/tags/R-([-0-9]+).*$", "\\1", tags)
   
   # filter out working branches
