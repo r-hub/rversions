@@ -14,3 +14,4 @@ Imports:
     curl,
     xml2,
     utils
+Remotes: hadley/xml2
