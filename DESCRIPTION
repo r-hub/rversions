@@ -1,6 +1,6 @@
 Package: rversions
 Title: Query 'R' Versions, Including 'r-release' and 'r-oldrel'
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
     person("Gabor", "Csardi", , "csardi.gabor@gmail.com", role = c("aut", "cre")),
     person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = "ctb"))
