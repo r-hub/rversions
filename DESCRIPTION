@@ -12,6 +12,6 @@ URL: https://github.com/metacran/rversions
 BugReports: https://github.com/metacran/rversions/issues
 Imports:
     curl,
-    xml2,
+    xml2 (>= 1.0.0),
     utils
 Encoding: UTF-8
