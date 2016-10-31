@@ -21,7 +21,7 @@ r_versions <- function(dots = TRUE) {
   
   # issue http request to svn
   h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth="1")
-  req <- curl_fetch_memory("http://svn.r-project.org/R/tags/", handle = h)
+  req <- curl_fetch_memory(r_svn_url, handle = h)
   
   # extract xml nodes
   doc <- read_xml(rawToChar(req$content))

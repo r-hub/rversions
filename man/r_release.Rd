@@ -12,7 +12,7 @@ number.}
 }
 \value{
 A one row data frame, with columns \sQuote{version} and
-  \sQuote{date}.
+\sQuote{date}.
 }
 \description{
 The latest tag in the SVN repository (in terms of version numbers,

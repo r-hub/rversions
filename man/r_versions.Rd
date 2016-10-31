@@ -12,7 +12,7 @@ number.}
 }
 \value{
 A data frame with two chracter columns: \sQuote{version} and
-  \sQuote{date}.
+\sQuote{date}.
 }
 \description{
 R version numbers consist of three numbers (since version 1.4.1):

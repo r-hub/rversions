@@ -12,7 +12,7 @@ number.}
 }
 \value{
 A one row data frame, with columns \sQuote{version} and
-  \sQuote{date}.
+\sQuote{date}.
 }
 \description{
 R-oldrel is the latest version of the previous minor version.

@@ -15,4 +15,5 @@ Imports:
     xml2 (>= 1.0.0),
     utils
 Encoding: UTF-8
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000
+Roxygen: list(markdown = TRUE)
