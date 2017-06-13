@@ -19,11 +19,11 @@ test_that("dots", {
 })
 
 test_that("r_release respects dots", {
-  expect_match(r_release(TRUE), RE_DOT)
-  expect_match(r_release(FALSE), RE_DASH)
+  expect_match(r_release(TRUE)$version, RE_DOT)
+  expect_match(r_release(FALSE)$version, RE_DASH)
 })
 
 test_that("r_oldrel respects dots", {
-  expect_match(r_oldrel(TRUE), RE_DOT)
-  expect_match(r_oldrel(FALSE), RE_DASH)
+  expect_match(r_oldrel(TRUE)$version, RE_DOT)
+  expect_match(r_oldrel(FALSE)$version, RE_DASH)
 })
