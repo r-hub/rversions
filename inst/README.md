@@ -172,7 +172,7 @@ r_versions()
     `rversions` and uses it in `check_r_version()`, a function that
     checks and coerces something into an R version.
 
-## In other tools
+### In other tools
 
   - [r-appveyor web service uses `rversions` to determine what versions
     r-release and r-oldrel
