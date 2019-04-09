@@ -24,4 +24,3 @@ We extract the version numbers from the tags in the SVN repository.
 \examples{
 r_versions()
 }
-

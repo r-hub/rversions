@@ -24,4 +24,4 @@ r_release_macos()
 Other R downloads: \code{\link{r_release_tarball}},
   \code{\link{r_release_win}}
 }
-
+\concept{R downloads}
