@@ -1,3 +1,6 @@
+# 1.0.3.900
+
+* R versions are now cached within each R session (@richfitz, #6)
 
 # 1.0.3
 
