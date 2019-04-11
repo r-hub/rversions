@@ -1,4 +1,4 @@
-# rversions 1.0.4
+# rversions 1.1.0
 
 * All function outputs now also have a column with version nickname(s).
 
