@@ -1,6 +1,8 @@
-# rversions 1.0.3.900
+# rversions 1.0.4
 
-* R versions are now cached within each R session (@richfitz, #6)
+* All function outputs now also have a column with version nickname(s).
+
+* R versions are now cached within each R session (@richfitz, #6).
 
 # rversions 1.0.3
 
