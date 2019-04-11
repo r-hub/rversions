@@ -27,3 +27,15 @@ test_that("r_oldrel respects dots", {
   expect_match(r_oldrel(TRUE)$version, RE_DOT)
   expect_match(r_oldrel(FALSE)$version, RE_DASH)
 })
+
+test_that("on-demand nickname update", {
+  d <- r_versions()
+  nicks <- cached_nicks()
+
+  ## We add foobar to make sure that mocking is in place
+  nicks[length(nicks) - 3] <- "foobar"
+  d$nickname[nrow(d) - 3] <- "foobar"
+
+  mockery::stub(r_versions, "cached_nicks", head(nicks, -2))
+  expect_equal(d, r_versions())
+})

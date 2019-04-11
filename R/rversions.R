@@ -22,6 +22,7 @@ r_versions <- function(dots = TRUE) {
   dotver <- gsub('-', '.', df$version)
   if (dots) df$version <- dotver
 
+  nicks <- cached_nicks()
   nonick <- setdiff(dotver, names(nicks))
   if (length(nonick)) nicks <- c(nicks, get_nicknames(nonick))
 

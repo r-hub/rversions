@@ -1,5 +1,5 @@
 
-nicks <-
+cached_nicks <- function() {
   c("0.60" = NA, "0.61" = NA, "0.61.1" = NA,
     "0.61.2" = NA, "0.61.3" = NA, "0.62" = NA,
     "0.62.1" = NA, "0.62.2" = NA, "0.62.3" = NA,
@@ -42,6 +42,7 @@ nicks <-
     "3.4.4" = "Someone to Lean On", "3.5.0" = "Joy in Playing",
     "3.5.1" = "Feather Spray", "3.5.2" = "Eggshell Igloo",
     "3.5.3" = "Great Truth")
+}
 
 get_nicknames <- function(vers = r_versions(dots = TRUE)$version) {
   dash_vers <- gsub(".", "-", vers, fixed = TRUE)

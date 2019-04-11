@@ -17,4 +17,6 @@ Imports:
 Encoding: UTF-8
 RoxygenNote: 5.0.1.9000
 Roxygen: list(markdown = TRUE)
-Suggests: testthat
+Suggests:
+    mockery,
+    testthat
