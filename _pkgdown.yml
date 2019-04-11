@@ -1,0 +1,19 @@
+authors:
+  R Consortium:
+    href: "https://www.r-consortium.org/"
+    html: "<img src='https://www.r-consortium.org/wp-content/uploads/sites/13/2016/09/RConsortium_Horizontal_Pantone.png' height=24>"
+
+
+reference:
+- title: Version labels
+  desc: ~
+  contents:
+  - '`r_oldrel`'
+  - '`r_release`'
+  - '`r_release_macos`'
+  - '`r_release_tarball`'
+  - '`r_release_win`'
+- title: All R versions
+  desc: ~
+  contents:
+  - '`r_versions`'

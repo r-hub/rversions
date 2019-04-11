@@ -21,4 +21,3 @@ not dates).
 \examples{
 r_release()
 }
-

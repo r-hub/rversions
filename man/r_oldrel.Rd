@@ -21,4 +21,3 @@ We extract version numbers from the R SVN repository tags.
 \examples{
 r_oldrel()
 }
-

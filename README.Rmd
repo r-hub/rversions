@@ -1,3 +1,10 @@
+---
+output:
+  github_document:
+    html_preview: false
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
@@ -15,6 +22,8 @@ knitr::opts_chunk$set(
 
 The R version numbers and dates are extracted from the
 main R SVN repository at http://svn.r-project.org/R/.
+
+`rversions` is in particular useful for determining at any given moment what versions "R-release" and "R-oldrel" refer to. This is useful for e.g. [R-hub](https://docs.r-hub.io/).
 
 ## Installation
 
@@ -37,6 +46,7 @@ r_oldrel()
 ```{r}
 r_versions()
 ```
+
 
 ## License
 

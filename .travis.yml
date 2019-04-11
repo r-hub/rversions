@@ -1,31 +1,18 @@
+language: r
+sudo: false
+cache: packages
 
-language: c
-sudo: required
+matrix:
+  include:
+   - r: release
+     before_cache: Rscript -e 'remotes::install_github("r-lib/pkgdown")'
+     deploy:
+       provider: script
+       script: Rscript -e 'pkgdown::deploy_site_github()'
+       skip_cleanup: true
+   - r: devel
+   - r: oldrel
 
-before_install:
-  - curl -OL https://raw.githubusercontent.com/metacran/r-builder/master/pkg-build.sh
-  - chmod 755 pkg-build.sh
-  - ./pkg-build.sh bootstrap
-
-install:
-  - ./pkg-build.sh install_deps
-
-script:
-  - ./pkg-build.sh run_build
-  - ./pkg-build.sh run_check
-
-after_failure:
-  - ./pkg-build.sh dump_logs
-
-notifications:
-  email:
-    on_success: change
-    on_failure: change
-
-env:
-  matrix:
-    - RVERSION=oldrel
-    - RVERSION=release
-    - RVERSION=devel
-  global:
-    - NOT_CRAN=1
+after_success:
+  - Rscript -e 'covr::codecov()'
+ 
