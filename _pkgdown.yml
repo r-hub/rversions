@@ -5,7 +5,7 @@ authors:
 
 
 reference:
-- title: Shortcuts
+- title: Single R versions
   desc: ~
   contents:
   - '`r_oldrel`'

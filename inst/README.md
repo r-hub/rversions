@@ -160,34 +160,6 @@ r_versions()
     #> 111   3.5.2 2018-12-20T08:04:40.536010Z
     #> 112   3.5.3 2019-03-11T08:04:49.379300Z
 
-## Use cases in the wild
-
-### In R packages
-
-  - `rversions` is used in `devtools`, in
-    [`dr_devtools()`](https://devtools.r-lib.org/reference/dr_devtools.html)
-    to compare the installed R version to the current R release version.
-
-  - [`provisionr`](https://github.com/mrc-ide/provisionr) imports
-    `rversions` and uses it in `check_r_version()`, a function that
-    checks and coerces something into an R version.
-
-### In other tools
-
-  - [r-appveyor web service uses `rversions` to determine what versions
-    r-release and r-oldrel
-    are](https://github.com/krlmlr/r-appveyor/blob/master/scripts/appveyor-tool.ps1#L77-L87).
-
-  - R-hub uses it to do the same on
-    [Solaris](https://github.com/r-hub/solarischeck/blob/d3edc6077f52081a53b2ed8b9ec40e17176fdb43/run.sh#L105),
-    [macOS](https://github.com/r-hub/macoscheck/blob/846f87d1ad1c4b4aeb283a986e084913f203879f/run.sh#L160)
-    and
-    [Windows](https://github.com/r-hub/wincheck/blob/591ea8d9a28cd5044c063e88f46ef0507fa16fc7/run.ps1#L114).
-
-  - [R-hub’s Windows install script uses it as well, to decide what
-    versions of R to
-    install](https://github.com/r-hub/rhub-server/blob/master/jenkins/scripts/windows-2008-setup.ps1#L74-L79).
-
 ## License
 
 MIT © [Gábor Csárdi](http://gaborcsardi.org)
