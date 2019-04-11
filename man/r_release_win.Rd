@@ -7,8 +7,8 @@
 r_release_win()
 }
 \value{
-A one row data frame, with columns \sQuote{version} and
-\sQuote{date} and \sQuote{URL}.
+A one row data frame, with columns \sQuote{version},
+\sQuote{date}, \sQuote{URL} and \sQuote{nickname}.
 }
 \description{
 \code{\link[=r_release]{r_release()}} works based on the SVN tags in the main R source code

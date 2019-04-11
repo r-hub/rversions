@@ -6,7 +6,7 @@ RE_DOT <- "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
 test_that("versions", {
   d <- r_versions()
   expect_is(d, "data.frame")
-  expect_equal(names(d), c("version", "date"))
+  expect_equal(names(d), c("version", "date", "nickname"))
   expect_is(d$version, "character")
   expect_is(d$date, "character")
 })
