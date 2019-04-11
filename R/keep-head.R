@@ -12,6 +12,8 @@ keep_head <- function(base_url, extension) {
     if (resp$status_code == 200) {
       df <- versions[v, , drop = FALSE]
       df$URL <- url
+      othercols <- setdiff(colnames(df), c("version", "date", "URL"))
+      df <- df[, c("version", "date", "URL", othercols)]
       return(df)
     }
   }

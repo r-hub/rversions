@@ -6,8 +6,8 @@
 #' is available for download. `r_release_tarball` returns the latest
 #' version for which a source tarball is available.
 #'
-#' @return A one row data frame, with columns \sQuote{version} and
-#'   \sQuote{date} and \sQuote{URL}.
+#' @return A one row data frame, with columns \sQuote{version},
+#'   \sQuote{date}, \sQuote{URL} and \sQuote{nickname}.
 #'
 #' @export
 #' @family R downloads

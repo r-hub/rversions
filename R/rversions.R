@@ -8,8 +8,8 @@
 #'
 #' @param dots Whether to use dots instead of dashes in the version
 #'   number.
-#' @return A data frame with two chracter columns: \sQuote{version} and
-#'   \sQuote{date}.
+#' @return A data frame with three chracter columns: \sQuote{version},
+#'   \sQuote{date} and \sQuote{nickname}.
 #'
 #' @export
 #' @importFrom curl new_handle handle_setheaders curl_fetch_memory
@@ -19,9 +19,15 @@
 
 r_versions <- function(dots = TRUE) {
   df <- r_versions_fetch()
-  if (dots) {
-    df$version <- gsub('-', '.', df$version)
-  }
+  dotver <- gsub('-', '.', df$version)
+  if (dots) df$version <- dotver
+
+  nicks <- cached_nicks()
+  nonick <- setdiff(dotver, names(nicks))
+  if (length(nonick)) nicks <- c(nicks, get_nicknames(nonick))
+
+  df$nickname <- rep(NA_character_, nrow(df))
+  df$nickname[match(names(nicks), dotver)] <- nicks
   df
 }
 
@@ -31,8 +37,8 @@ r_versions <- function(dots = TRUE) {
 #' not dates).
 #'
 #' @inheritParams r_versions
-#' @return A one row data frame, with columns \sQuote{version} and
-#'   \sQuote{date}.
+#' @return A one row data frame, with columns \sQuote{version},
+#'   \sQuote{date} and \sQuote{nickname}.
 #'
 #' @export
 #' @importFrom utils tail
@@ -50,8 +56,8 @@ r_release <- function(dots = TRUE) {
 #' We extract version numbers from the R SVN repository tags.
 #'
 #' @inheritParams r_versions
-#' @return A one row data frame, with columns \sQuote{version} and
-#'   \sQuote{date}.
+#' @return A one row data frame, with columns \sQuote{version},
+#'   \sQuote{date} and \sQuote{nickname}.
 #'
 #' @export
 #' @importFrom utils tail

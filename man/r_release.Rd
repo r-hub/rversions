@@ -11,8 +11,8 @@ r_release(dots = TRUE)
 number.}
 }
 \value{
-A one row data frame, with columns \sQuote{version} and
-\sQuote{date}.
+A one row data frame, with columns \sQuote{version},
+\sQuote{date} and \sQuote{nickname}.
 }
 \description{
 The latest tag in the SVN repository (in terms of version numbers,

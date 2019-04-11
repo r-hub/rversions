@@ -6,8 +6,8 @@
 #' is available for download. `r_release_win` returns the latest
 #' version for which a Windows installer is available.
 #'
-#' @return A one row data frame, with columns \sQuote{version} and
-#'   \sQuote{date} and \sQuote{URL}.
+#' @return A one row data frame, with columns \sQuote{version},
+#'   \sQuote{date}, \sQuote{URL} and \sQuote{nickname}.
 #'
 #' @family R downloads
 #' @export
