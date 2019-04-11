@@ -17,8 +17,9 @@ main R SVN repository at \url{http://svn.r-project.org/R/}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/metacran/rversions}
-  \item Report bugs at \url{https://github.com/metacran/rversions/issues}
+  \item \url{https://github.com/r-hub/rversions}
+  \item \url{https://r-hub.github.io/rversions}
+  \item Report bugs at \url{https://github.com/r-hub/rversions/issues}
 }
 
 }

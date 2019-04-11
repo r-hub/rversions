@@ -2,7 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 [![Linux Build
-Status](https://travis-ci.org/metacran/rversions.svg?branch=master)](https://travis-ci.org/metacran/rversions)
+Status](https://travis-ci.org/r-hub/rversions.svg?branch=master)](https://travis-ci.org/r-hub/rversions)
 [![Windows Build
 status](https://ci.appveyor.com/api/projects/status/github/metacran/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
 [![CRAN RStudio mirror

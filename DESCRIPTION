@@ -9,8 +9,8 @@ Description: Query the main 'R' 'SVN' repository to find the
     versions 'r-release' and 'r-oldrel' refer to, and also all
     previous 'R' versions and their release dates.
 License: MIT + file LICENSE
-URL: https://github.com/metacran/rversions
-BugReports: https://github.com/metacran/rversions/issues
+URL: https://github.com/r-hub/rversions, https://r-hub.github.io/rversions
+BugReports: https://github.com/r-hub/rversions/issues
 Imports:
     curl,
     xml2 (>= 1.0.0),
