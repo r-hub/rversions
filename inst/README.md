@@ -15,6 +15,10 @@ version](http://www.r-pkg.org/badges/version/rversions)](http://r-pkg.org/pkg/rv
 The R version numbers and dates are extracted from the main R SVN
 repository at <http://svn.r-project.org/R/>.
 
+`rversions` is in particular useful for determining at any given moment
+what versions “R-release” and “R-oldrel” refer to. This is useful for
+e.g. [R-hub](https://docs.r-hub.io/).
+
 ## Installation
 
 ``` r
