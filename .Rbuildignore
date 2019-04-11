@@ -7,3 +7,5 @@
 ^appveyor.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^revdep$
+^_pkgdown.yml$
