@@ -31,7 +31,7 @@ test_that("r_oldrel respects dots", {
 test_that("on-demand nickname update", {
   d <- r_versions()
   nicks <- cached_nicks()
-  
+
   ## We add foobar to make sure that mocking is in place
   nicks[length(nicks) - 3] <- "foobar"
   d$nickname[length(nicks) - 3] <- "foobar"
