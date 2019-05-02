@@ -9,6 +9,8 @@ status](https://ci.appveyor.com/api/projects/status/github/r-hub/rversions?svg=t
 downloads](http://cranlogs.r-pkg.org/badges/rversions)](http://r-pkg.org/pkg/rversions)
 [![CRAN
 version](http://www.r-pkg.org/badges/version/rversions)](http://r-pkg.org/pkg/rversions)
+[![CRAN
+checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
 
 # rversions — past and present R versions
 
@@ -34,15 +36,15 @@ library(rversions)
 r_release()
 ```
 
-    #>     version                        date    nickname
-    #> 112   3.5.3 2019-03-11T08:04:49.379300Z Great Truth
+    #>     version                        date           nickname
+    #> 113   3.6.0 2019-04-26T07:05:03.899333Z Planting of a Tree
 
 ``` r
 r_oldrel()
 ```
 
-    #>     version                        date           nickname
-    #> 108   3.4.4 2018-03-15T08:04:27.234564Z Someone to Lean On
+    #>     version                        date    nickname
+    #> 112   3.5.3 2019-03-11T08:04:49.379300Z Great Truth
 
 ### All R versions and release dates
 
@@ -163,6 +165,7 @@ r_versions()
     #> 110   3.5.1 2018-07-02T07:04:31.629927Z            Feather Spray
     #> 111   3.5.2 2018-12-20T08:04:40.536010Z           Eggshell Igloo
     #> 112   3.5.3 2019-03-11T08:04:49.379300Z              Great Truth
+    #> 113   3.6.0 2019-04-26T07:05:03.899333Z       Planting of a Tree
 
 ## License
 
