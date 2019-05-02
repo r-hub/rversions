@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-hub/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rversions)](http://r-pkg.org/pkg/rversions)
 [![CRAN version](http://www.r-pkg.org/badges/version/rversions)](http://r-pkg.org/pkg/rversions)
+[![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
 
 # rversions — past and present R versions
 
