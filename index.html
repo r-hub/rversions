@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Query 'R' Versions, Including 'r-release' and 'r-oldrel' • rversions</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
@@ -84,7 +90,7 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"rversions"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"rversions"</span>)</a></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -92,13 +98,13 @@
 <div id="r-release-and-r-oldrel" class="section level3">
 <h3 class="hasAnchor">
 <a href="#r-release-and-r-oldrel" class="anchor"></a>R-release and R-oldrel</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rversions)</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rversions)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="reference/r_release.html">r_release</a></span>()</a></code></pre></div>
+<pre><code>#&gt;     version                        date           nickname
+#&gt; 113   3.6.0 2019-04-26T07:05:03.899333Z Planting of a Tree</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/r_oldrel.html">r_oldrel</a></span>()</a></code></pre></div>
 <pre><code>#&gt;     version                        date    nickname
 #&gt; 112   3.5.3 2019-03-11T08:04:49.379300Z Great Truth</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/r_oldrel.html">r_oldrel</a></span>()</a></code></pre></div>
-<pre><code>#&gt;     version                        date           nickname
-#&gt; 108   3.4.4 2018-03-15T08:04:27.234564Z Someone to Lean On</code></pre>
 </div>
 <div id="all-r-versions-and-release-dates" class="section level3">
 <h3 class="hasAnchor">
@@ -216,7 +222,8 @@
 #&gt; 109   3.5.0 2018-04-23T07:04:38.341063Z           Joy in Playing
 #&gt; 110   3.5.1 2018-07-02T07:04:31.629927Z            Feather Spray
 #&gt; 111   3.5.2 2018-12-20T08:04:40.536010Z           Eggshell Igloo
-#&gt; 112   3.5.3 2019-03-11T08:04:49.379300Z              Great Truth</code></pre>
+#&gt; 112   3.5.3 2019-03-11T08:04:49.379300Z              Great Truth
+#&gt; 113   3.6.0 2019-04-26T07:05:03.899333Z       Planting of a Tree</code></pre>
 </div>
 </div>
 <div id="license" class="section level2">
