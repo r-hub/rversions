@@ -8,7 +8,7 @@ test_that("versions", {
   expect_is(d, "data.frame")
   expect_equal(names(d), c("version", "date", "nickname"))
   expect_is(d$version, "character")
-  expect_is(d$date, "character")
+  expect_is(d$date, "POSIXt")
 })
 
 test_that("dots", {
