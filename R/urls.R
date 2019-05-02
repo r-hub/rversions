@@ -1,8 +1,8 @@
-r_svn_url <- function(){
+r_svn_url <- function() {
   "https://svn.r-project.org/R/tags/"
 }
 
-cran_url <- function(){
+cran_url <- function() {
   if (nzchar(Sys.getenv("R_RVERSIONS_CRAN_URL"))){
     Sys.getenv("R_RVERSIONS_CRAN_URL")
   } else {
@@ -10,14 +10,14 @@ cran_url <- function(){
   }
 }
 
-r_download_url <- function(){
+r_download_url <- function() {
   paste0(cran_url(), "/src/base/R-3/")
 }
 
-r_win_download_url <- function(){
+r_win_download_url <- function() {
   paste0(cran_url(), "/bin/windows/base/")
 }
 
-r_macos_download_url <- function(){
+r_macos_download_url <- function() {
   paste0(cran_url(), "/bin/macosx/")
 }
