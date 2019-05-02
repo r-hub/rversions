@@ -34,7 +34,7 @@ test_that("on-demand nickname update", {
 
   ## We add foobar to make sure that mocking is in place
   nicks[length(nicks) - 3] <- "foobar"
-  d$nickname[nrow(d) - 3] <- "foobar"
+  d$nickname[length(nicks) - 3] <- "foobar"
 
   mockery::stub(r_versions, "cached_nicks", head(nicks, -2))
   expect_equal(d, r_versions())
