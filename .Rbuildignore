@@ -9,3 +9,4 @@
 ^\.Rproj\.user$
 ^revdep$
 ^_pkgdown.yml$
+^pkgdown$
