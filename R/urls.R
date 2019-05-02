@@ -6,7 +6,7 @@ cran_url <- function() {
   if (nzchar(Sys.getenv("R_RVERSIONS_CRAN_URL"))){
     Sys.getenv("R_RVERSIONS_CRAN_URL")
   } else {
-    "cran.r-project.org"
+    "https://cran.r-project.org"
   }
 }
 

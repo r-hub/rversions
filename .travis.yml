@@ -3,7 +3,7 @@ sudo: false
 cache: packages
 
 env:
-  - R_RVERSIONS_CRAN_URL='cloud.r-project.org'
+  - R_RVERSIONS_CRAN_URL='https://cloud.r-project.org'
 
 title: Query R Versions, Including r-release and r-oldrel
 
