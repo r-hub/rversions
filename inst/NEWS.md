@@ -1,5 +1,7 @@
 # rversions (development version)
 
+* Add 3.6.0 nickname to the nicks.R file.
+
 * Fix test of nicknames caching so that it might work even when there is a new version nickname that's not in the package data yet.
 
 # rversions 1.1.0
