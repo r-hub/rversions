@@ -85,7 +85,7 @@ r_versions_fetch <- function() {
   if (is.null(cache$versions)) {
     # issue http request to svn
     h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth="1")
-    req <- curl_fetch_memory(r_svn_url, handle = h)
+    req <- curl_fetch_memory(r_svn_url(), handle = h)
 
     # extract xml nodes
     doc <- read_xml(rawToChar(req$content))

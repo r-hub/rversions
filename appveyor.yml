@@ -11,6 +11,8 @@ install:
   ps: Bootstrap
 
 # Adapt as necessary starting from here
+environment:
+  R_RVERSIONS_CRAN_URL: 'https://cloud.r-project.org'
 
 build_script:
   - travis-tool.sh install_deps

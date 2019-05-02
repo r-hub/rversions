@@ -17,5 +17,5 @@
 #' r_release_tarball()
 
 r_release_tarball <- function() {
-  keep_head(r_download_url, ".tar.gz")
+  keep_head(r_download_url(), ".tar.gz")
 }
