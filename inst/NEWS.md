@@ -1,14 +1,10 @@
+
 # rversions (development version)
 
 ## Breaking change
 
-* `r_versions()` and all other functions now parse the date, so the date column is a POSIXt, not a character (@hadley, #13)
-
-## Minor changes
-
-* Add 3.6.0 nickname to the nicks.R file.
-
-* Fix test of nicknames caching so that it might work even when there is a new version nickname that's not in the package data yet.
+* `r_versions()` and all other functions now parse the date, so the date
+  column is a POSIXt, not a character (#13).
 
 # rversions 1.1.0
 
