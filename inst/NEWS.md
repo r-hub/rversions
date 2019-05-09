@@ -1,5 +1,4 @@
-
-# rversions (development version)
+# rversions 2.0.0
 
 ## Breaking change
 
