@@ -24,6 +24,7 @@ knitr::opts_chunk$set(
 [![CRAN version](http://www.r-pkg.org/badges/version/rversions)](http://r-pkg.org/pkg/rversions)
 [![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/r-hub/community)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 The R version numbers and dates are extracted from the
