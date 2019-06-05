@@ -2,8 +2,6 @@ language: r
 sudo: false
 cache: packages
 
-title: Query R Versions, Including r-release and r-oldrel
-
 matrix:
   include:
    - r: release
