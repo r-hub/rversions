@@ -13,13 +13,18 @@ knitr::opts_chunk$set(
   error = FALSE)
 ```
 
+# rversions <a href='https://r-hub.github.io/rversions'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+
+> Past and present R versions
+
+<!-- badges: start -->
 [![Linux Build Status](https://travis-ci.org/r-hub/rversions.svg?branch=master)](https://travis-ci.org/r-hub/rversions)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-hub/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rversions)](http://r-pkg.org/pkg/rversions)
 [![CRAN version](http://www.r-pkg.org/badges/version/rversions)](http://r-pkg.org/pkg/rversions)
 [![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
-
-# rversions — past and present R versions
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/r-hub/community)
+<!-- badges: end -->
 
 The R version numbers and dates are extracted from the
 main R SVN repository at http://svn.r-project.org/R/.
