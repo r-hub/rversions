@@ -17,5 +17,5 @@
 #' r_release_win()
 
 r_release_win <- function() {
-  keep_head(r_win_download_url, "-win.exe")
+  keep_head(r_win_download_url(), "-win.exe")
 }

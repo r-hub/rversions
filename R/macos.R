@@ -17,5 +17,5 @@
 #' r_release_macos()
 
 r_release_macos <- function() {
-  keep_head(r_macos_download_url, ".pkg")
+  keep_head(r_macos_download_url(), ".pkg")
 }
