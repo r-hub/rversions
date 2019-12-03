@@ -47,7 +47,7 @@ r_release()
 ```
 
     #>     version                date           nickname
-    #> 113   3.6.0 2019-04-26 07:05:03 Planting of a Tree
+    #> 114   3.6.1 2019-07-05 07:05:03 Action of the Toes
 
 ``` r
 r_oldrel()
@@ -176,7 +176,8 @@ r_versions()
     #> 111   3.5.2 2018-12-20 08:04:40           Eggshell Igloo
     #> 112   3.5.3 2019-03-11 08:04:49              Great Truth
     #> 113   3.6.0 2019-04-26 07:05:03       Planting of a Tree
+    #> 114   3.6.1 2019-07-05 07:05:03       Action of the Toes
 
 ## License
 
-MIT © [Gábor Csárdi](http://gaborcsardi.org)
+MIT © [Gábor Csárdi](https://github.com/gaborcsardi)

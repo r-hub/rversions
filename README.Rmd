@@ -57,4 +57,4 @@ r_versions()
 
 ## License
 
-MIT © [Gábor Csárdi](http://gaborcsardi.org)
+MIT © [Gábor Csárdi](https://github.com/gaborcsardi)
