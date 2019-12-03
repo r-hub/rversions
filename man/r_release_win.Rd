@@ -21,7 +21,8 @@ r_release()
 r_release_win()
 }
 \seealso{
-Other R downloads: \code{\link{r_release_macos}},
-  \code{\link{r_release_tarball}}
+Other R downloads: 
+\code{\link{r_release_macos}()},
+\code{\link{r_release_tarball}()}
 }
 \concept{R downloads}

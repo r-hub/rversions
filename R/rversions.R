@@ -8,7 +8,7 @@
 #'
 #' @param dots Whether to use dots instead of dashes in the version
 #'   number.
-#' @return A data frame with three chracter columns: \sQuote{version},
+#' @return A data frame with three columns: \sQuote{version},
 #'   \sQuote{date} and \sQuote{nickname}.
 #'
 #' @export

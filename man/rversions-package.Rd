@@ -6,9 +6,11 @@
 \alias{rversions-package}
 \title{rversions: Query 'R' Versions, Including 'r-release' and 'r-oldrel'}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 Query the main 'R' 'SVN' repository to find the
-    versions 'r-release' and 'r-oldrel' refer to, and also all
-    previous 'R' versions and their release dates.
+    versions 'r-release' and 'r-oldrel' refer to, and also all previous
+    'R' versions and their release dates.
 }
 \details{
 The R version numbers and dates are extracted from the

@@ -11,7 +11,7 @@ r_versions(dots = TRUE)
 number.}
 }
 \value{
-A data frame with three chracter columns: \sQuote{version},
+A data frame with three columns: \sQuote{version},
 \sQuote{date} and \sQuote{nickname}.
 }
 \description{
