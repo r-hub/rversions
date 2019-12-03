@@ -10,3 +10,4 @@
 ^revdep$
 ^_pkgdown.yml$
 ^pkgdown$
+^cran-comments\.md$
