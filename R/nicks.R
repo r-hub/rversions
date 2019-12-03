@@ -42,7 +42,8 @@ cached_nicks <- function() {
     "3.4.2" = "Short Summer", "3.4.3" = "Kite-Eating Tree",
     "3.4.4" = "Someone to Lean On", "3.5.0" = "Joy in Playing",
     "3.5.1" = "Feather Spray", "3.5.2" = "Eggshell Igloo",
-    "3.5.3" = "Great Truth", "3.6.0" = "Planting of a Tree")
+    "3.5.3" = "Great Truth", "3.6.0" = "Planting of a Tree",
+    "3.6.1" = "Action of the Toes")
 }
 
 get_nicknames <- function(vers = r_versions(dots = TRUE)$version) {
