@@ -32,7 +32,6 @@ r_versions <- function(dots = TRUE) {
 
   df$nickname <- rep(NA_character_, nrow(df))
   df$nickname[match(names(nicks), dotver)] <- nicks
-  df$nickname <- as.character(df$nickname)
   df
 }
 
