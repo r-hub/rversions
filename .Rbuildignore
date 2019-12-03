@@ -1,6 +1,5 @@
 ^README.md$
 ^README.Rmd$
-^NEWS.md$
 ^Makefile$
 ^tags$
 ^.travis.yml$
