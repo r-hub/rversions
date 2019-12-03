@@ -1,23 +1,31 @@
 Package: rversions
 Title: Query 'R' Versions, Including 'r-release' and 'r-oldrel'
 Version: 2.0.0.9000
-Authors@R: c(
-    person("Gábor", "Csárdi", , "csardi.gabor@gmail.com", role = c("aut", "cre")),
-    person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = "ctb"),
-    person("R Consortium", role = c("fnd")))
+Authors@R: 
+    c(person(given = "Gábor",
+             family = "Csárdi",
+             role = c("aut", "cre"),
+             email = "csardi.gabor@gmail.com"),
+      person(given = "Jeroen",
+             family = "Ooms",
+             role = "ctb",
+             email = "jeroen.ooms@stat.ucla.edu"),
+      person(given = "R Consortium",
+             role = "fnd"))
 Description: Query the main 'R' 'SVN' repository to find the
-    versions 'r-release' and 'r-oldrel' refer to, and also all
-    previous 'R' versions and their release dates.
+    versions 'r-release' and 'r-oldrel' refer to, and also all previous
+    'R' versions and their release dates.
 License: MIT + file LICENSE
-URL: https://github.com/r-hub/rversions, https://r-hub.github.io/rversions
+URL: https://github.com/r-hub/rversions,
+    https://r-hub.github.io/rversions
 BugReports: https://github.com/r-hub/rversions/issues
 Imports:
     curl,
-    xml2 (>= 1.0.0),
-    utils
-Encoding: UTF-8
-RoxygenNote: 6.1.1
-Roxygen: list(markdown = TRUE)
+    utils,
+    xml2 (>= 1.0.0)
 Suggests:
     mockery,
     testthat
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
