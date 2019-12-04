@@ -1,3 +1,5 @@
+# rversions (development version)
+
 # rversions 2.0.1
 
 * The date columns of all data.frames is now POSIXt, POSIXct, not POSIXlt, so you can convert the data.frames with `tibble::as_tibble()` directly (#20, @espinielli).
