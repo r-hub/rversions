@@ -43,7 +43,9 @@ cached_nicks <- function() {
     "3.4.4" = "Someone to Lean On", "3.5.0" = "Joy in Playing",
     "3.5.1" = "Feather Spray", "3.5.2" = "Eggshell Igloo",
     "3.5.3" = "Great Truth", "3.6.0" = "Planting of a Tree",
-    "3.6.1" = "Action of the Toes")
+    "3.6.1" = "Action of the Toes", "3.6.2" = "Dark and Stormy Night",
+    "3.6.3" = "Holding the Windsock", "4.0.0" = "Arbor Day"
+  )
 }
 
 get_nicknames <- function(vers = r_versions(dots = TRUE)$version) {
