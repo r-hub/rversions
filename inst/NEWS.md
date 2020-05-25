@@ -1,4 +1,4 @@
-# rversions (development version)
+# rversions 2.0.2
 
 * `r_release_tarball()` now has the correct URL for R 4.x.x.
 
