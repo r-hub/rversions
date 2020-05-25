@@ -11,7 +11,7 @@ cran_url <- function() {
 }
 
 r_download_url <- function() {
-  paste0(cran_url(), "/src/base/R-3/")
+  paste0(cran_url(), "/src/base/R-4/")
 }
 
 r_win_download_url <- function() {

@@ -1,5 +1,7 @@
 # rversions (development version)
 
+* `r_release_tarball()` now has the correct URL for R 4.x.x.
+
 # rversions 2.0.1
 
 * The date columns of all data.frames is now POSIXt, POSIXct, not POSIXlt, so you can convert the data.frames with `tibble::as_tibble()` directly (#20, @espinielli).
