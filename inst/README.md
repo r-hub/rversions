@@ -29,7 +29,7 @@ repository at <http://svn.r-project.org/R/>.
 
 `rversions` is in particular useful for determining at any given moment
 what versions “R-release” and “R-oldrel” refer to. This is useful for
-e.g. [R-hub](https://docs.r-hub.io/).
+e.g. [R-hub](https://docs.r-hub.io/).
 
 ## Installation
 
@@ -46,15 +46,15 @@ library(rversions)
 r_release()
 ```
 
-    #>     version                date           nickname
-    #> 114   3.6.1 2019-07-05 07:05:03 Action of the Toes
+    #>     version                date  nickname
+    #> 117   4.0.0 2020-04-24 07:05:34 Arbor Day
 
 ``` r
 r_oldrel()
 ```
 
-    #>     version                date    nickname
-    #> 112   3.5.3 2019-03-11 08:04:49 Great Truth
+    #>     version                date             nickname
+    #> 116   3.6.3 2020-02-29 08:05:16 Holding the Windsock
 
 ### All R versions and release dates
 
@@ -177,6 +177,9 @@ r_versions()
     #> 112   3.5.3 2019-03-11 08:04:49              Great Truth
     #> 113   3.6.0 2019-04-26 07:05:03       Planting of a Tree
     #> 114   3.6.1 2019-07-05 07:05:03       Action of the Toes
+    #> 115   3.6.2 2019-12-12 08:05:03    Dark and Stormy Night
+    #> 116   3.6.3 2020-02-29 08:05:16     Holding the Windsock
+    #> 117   4.0.0 2020-04-24 07:05:34                Arbor Day
 
 ## License
 
