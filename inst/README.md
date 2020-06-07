@@ -46,8 +46,8 @@ library(rversions)
 r_release()
 ```
 
-    #>     version                date  nickname
-    #> 117   4.0.0 2020-04-24 07:05:34 Arbor Day
+    #>     version                date       nickname
+    #> 118   4.0.1 2020-06-06 07:05:16 See Things Now
 
 ``` r
 r_oldrel()
@@ -180,6 +180,7 @@ r_versions()
     #> 115   3.6.2 2019-12-12 08:05:03    Dark and Stormy Night
     #> 116   3.6.3 2020-02-29 08:05:16     Holding the Windsock
     #> 117   4.0.0 2020-04-24 07:05:34                Arbor Day
+    #> 118   4.0.1 2020-06-06 07:05:16           See Things Now
 
 ## License
 
