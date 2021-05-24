@@ -14,13 +14,13 @@ Query the main 'R' 'SVN' repository to find the
 }
 \details{
 The R version numbers and dates are extracted from the
-main R SVN repository at \url{http://svn.r-project.org/R/}.
+main R SVN repository at \url{https://svn.r-project.org/R/}.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/r-hub/rversions}
-  \item \url{https://r-hub.github.io/rversions}
+  \item \url{https://r-hub.github.io/rversions/}
   \item Report bugs at \url{https://github.com/r-hub/rversions/issues}
 }
 

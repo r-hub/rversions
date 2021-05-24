@@ -17,7 +17,7 @@ Description: Query the main 'R' 'SVN' repository to find the
     'R' versions and their release dates.
 License: MIT + file LICENSE
 URL: https://github.com/r-hub/rversions,
-    https://r-hub.github.io/rversions
+    https://r-hub.github.io/rversions/
 BugReports: https://github.com/r-hub/rversions/issues
 Imports:
     curl,
