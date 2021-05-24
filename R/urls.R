@@ -19,5 +19,5 @@ r_win_download_url <- function() {
 }
 
 r_macos_download_url <- function() {
-  paste0(cran_url(), "/bin/macosx/")
+  paste0(cran_url(), "/bin/macosx/base/")
 }
