@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rversions</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -101,7 +101,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/r-hub/rversions/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -122,72 +122,81 @@
       <small>Source: <a href='https://github.com/r-hub/rversions/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="rversions-2-0-2" class="section level1">
-<h1 class="page-header" data-toc-text="2.0.2">
-<a href="#rversions-2-0-2" class="anchor"></a>rversions 2.0.2<small> 2020-05-25 </small>
+    <div id="rversions-210" class="section level1">
+<h1 class="page-header" data-toc-text="2.1.0">
+<a href="#rversions-210" class="anchor"></a>rversions 2.1.0<small> 2021-05-24 </small>
 </h1>
 <ul>
 <li>
-<code><a href="https://r-hub.github.io/rversions/reference/r_release_tarball.html">r_release_tarball()</a></code> now has the correct URL for R 4.x.x.</li>
+<code><a href="../reference/r_release_macos.html">r_release_macos()</a></code> is now correct again for R 4.1.0.</li>
 </ul>
 </div>
-    <div id="rversions-2-0-1" class="section level1">
+    <div id="rversions-202" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.2">
+<a href="#rversions-202" class="anchor"></a>rversions 2.0.2<small> 2020-05-25 </small>
+</h1>
+<ul>
+<li>
+<code><a href="../reference/r_release_tarball.html">r_release_tarball()</a></code> now has the correct URL for R 4.x.x.</li>
+</ul>
+</div>
+    <div id="rversions-201" class="section level1">
 <h1 class="page-header" data-toc-text="2.0.1">
-<a href="#rversions-2-0-1" class="anchor"></a>rversions 2.0.1<small> 2019-12-03 </small>
+<a href="#rversions-201" class="anchor"></a>rversions 2.0.1<small> 2019-12-03 </small>
 </h1>
 <ul>
 <li>The date columns of all data.frames is now POSIXt, POSIXct, not POSIXlt, so you can convert the data.frames with <code><a href="https://tibble.tidyverse.org/reference/as_tibble.html">tibble::as_tibble()</a></code> directly (<a href='https://github.com/r-hub/rversions/issues/20'>#20</a>, <a href='https://github.com/espinielli'>@espinielli</a>).</li>
 </ul>
 </div>
-    <div id="rversions-2-0-0" class="section level1">
+    <div id="rversions-200" class="section level1">
 <h1 class="page-header" data-toc-text="2.0.0">
-<a href="#rversions-2-0-0" class="anchor"></a>rversions 2.0.0<small> 2019-05-09 </small>
+<a href="#rversions-200" class="anchor"></a>rversions 2.0.0<small> 2019-05-09 </small>
 </h1>
 <div id="breaking-change" class="section level2">
 <h2 class="hasAnchor">
 <a href="#breaking-change" class="anchor"></a>Breaking change</h2>
 <ul>
 <li>
-<code><a href="https://r-hub.github.io/rversions/reference/r_versions.html">r_versions()</a></code> and all other functions now parse the date, so the date column is a POSIXt, not a character (<a href='https://github.com/r-hub/rversions/issues/13'>#13</a>).</li>
+<code><a href="../reference/r_versions.html">r_versions()</a></code> and all other functions now parse the date, so the date column is a POSIXt, not a character (<a href='https://github.com/r-hub/rversions/issues/13'>#13</a>).</li>
 </ul>
 </div>
 </div>
-    <div id="rversions-1-1-0" class="section level1">
+    <div id="rversions-110" class="section level1">
 <h1 class="page-header" data-toc-text="1.1.0">
-<a href="#rversions-1-1-0" class="anchor"></a>rversions 1.1.0<small> 2019-04-11 </small>
+<a href="#rversions-110" class="anchor"></a>rversions 1.1.0<small> 2019-04-11 </small>
 </h1>
 <ul>
 <li><p>All function outputs now also have a column with version nickname(s).</p></li>
 <li><p>R versions are now cached within each R session (<a href='https://github.com/richfitz'>@richfitz</a>, <a href='https://github.com/r-hub/rversions/issues/6'>#6</a>).</p></li>
 </ul>
 </div>
-    <div id="rversions-1-0-3" class="section level1">
+    <div id="rversions-103" class="section level1">
 <h1 class="page-header" data-toc-text="1.0.3">
-<a href="#rversions-1-0-3" class="anchor"></a>rversions 1.0.3<small> 2016-08-02 </small>
+<a href="#rversions-103" class="anchor"></a>rversions 1.0.3<small> 2016-08-02 </small>
 </h1>
 <ul>
 <li>Use <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml2::xml_find_first</a></code> instead of deprecated <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml2::xml_find_one</a></code> (Thanks to <a href='https://github.com/jimhester'>@jimhester</a>)</li>
 </ul>
 </div>
-    <div id="rversions-1-0-2" class="section level1">
+    <div id="rversions-102" class="section level1">
 <h1 class="page-header" data-toc-text="1.0.2">
-<a href="#rversions-1-0-2" class="anchor"></a>rversions 1.0.2<small> 2015-07-13 </small>
+<a href="#rversions-102" class="anchor"></a>rversions 1.0.2<small> 2015-07-13 </small>
 </h1>
 <ul>
 <li>Explicit import from base packages</li>
 </ul>
 </div>
-    <div id="rversions-1-0-1" class="section level1">
+    <div id="rversions-101" class="section level1">
 <h1 class="page-header" data-toc-text="1.0.1">
-<a href="#rversions-1-0-1" class="anchor"></a>rversions 1.0.1<small> 2015-06-06 </small>
+<a href="#rversions-101" class="anchor"></a>rversions 1.0.1<small> 2015-06-06 </small>
 </h1>
 <ul>
 <li>Rewritten using <code>xml2</code> and <code>curl</code> instead of <code>XML</code> and <code>RCurl</code> (Thanks to <a href='https://github.com/jeroenooms'>@jeroenooms</a>)</li>
 </ul>
 </div>
-    <div id="rversions-1-0-0" class="section level1">
+    <div id="rversions-100" class="section level1">
 <h1 class="page-header" data-toc-text="1.0.0">
-<a href="#rversions-1-0-0" class="anchor"></a>rversions 1.0.0<small> 2015-04-22 </small>
+<a href="#rversions-100" class="anchor"></a>rversions 1.0.0<small> 2015-04-22 </small>
 </h1>
 <p>First released version.</p>
 </div>
@@ -208,7 +217,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

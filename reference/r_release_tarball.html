@@ -83,7 +83,7 @@ version for which a source tarball is available." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rversions</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -91,7 +91,7 @@ version for which a source tarball is available." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -105,7 +105,7 @@ version for which a source tarball is available." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/r-hub/rversions/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,13 +128,13 @@ version for which a source tarball is available." />
     </div>
 
     <div class="ref-description">
-    <p><code><a href='https://r-hub.github.io/rversions/reference/r_release.html'>r_release()</a></code> works based on the SVN tags in the main R source code
+    <p><code><a href='r_release.html'>r_release()</a></code> works based on the SVN tags in the main R source code
 repository. However, an SVN tag does not mean that the same version
 is available for download. <code>r_release_tarball</code> returns the latest
 version for which a source tarball is available.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://r-hub.github.io/rversions/reference/r_release_tarball.html'>r_release_tarball</a></span>()</pre>
+    <pre class="usage"><span class='fu'>r_release_tarball</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -144,15 +144,17 @@ version for which a source tarball is available.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other R downloads: 
-<code><a href='https://r-hub.github.io/rversions/reference/r_release_macos.html'>r_release_macos</a>()</code>,
-<code><a href='https://r-hub.github.io/rversions/reference/r_release_win.html'>r_release_win</a>()</code></p></div>
+<code><a href='r_release_macos.html'>r_release_macos</a>()</code>,
+<code><a href='r_release_win.html'>r_release_win</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://r-hub.github.io/rversions/reference/r_release.html'>r_release</a></span>()</div><div class='output co'>#&gt;     version                date         nickname
-#&gt; 119   4.0.2 2020-06-22 07:05:19 Taking Off Again</div><div class='input'><span class='fu'><a href='https://r-hub.github.io/rversions/reference/r_release_tarball.html'>r_release_tarball</a></span>()</div><div class='output co'>#&gt;     version                date
-#&gt; 119   4.0.2 2020-06-22 07:05:19
-#&gt;                                                         URL         nickname
-#&gt; 119 https://cloud.r-project.org/src/base/R-4/R-4.0.2.tar.gz Taking Off Again</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='r_release.html'>r_release</a></span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;     version                date        nickname
+#&gt; 123   4.1.0 2021-05-18 07:05:22 Camp Pontanezen</div><div class='input'><span class='fu'>r_release_tarball</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;     version                date
+#&gt; 123   4.1.0 2021-05-18 07:05:22
+#&gt;                                                        URL        nickname
+#&gt; 123 https://cran.r-project.org/src/base/R-4/R-4.1.0.tar.gz Camp Pontanezen</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -168,7 +170,7 @@ version for which a source tarball is available.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
