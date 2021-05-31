@@ -17,8 +17,10 @@ is available for download. \code{r_release_tarball} returns the latest
 version for which a source tarball is available.
 }
 \examples{
+\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 r_release()
 r_release_tarball()
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other R downloads: 

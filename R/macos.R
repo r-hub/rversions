@@ -12,7 +12,7 @@
 #' @family R downloads
 #' @export
 #' @importFrom curl new_handle handle_setopt
-#' @examples
+#' @examplesIf rversions:::is_online()
 #' r_release()
 #' r_release_macos()
 

@@ -14,7 +14,7 @@
 #' @export
 #' @importFrom curl new_handle handle_setheaders curl_fetch_memory
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_find_first xml_text
-#' @examples
+#' @examplesIf rversions:::is_online()
 #' r_versions()
 
 r_versions <- function(dots = TRUE) {
@@ -46,7 +46,7 @@ r_versions <- function(dots = TRUE) {
 #'
 #' @export
 #' @importFrom utils tail
-#' @examples
+#' @examplesIf rversions:::is_online()
 #' r_release()
 
 r_release <- function(dots = TRUE) {
@@ -65,7 +65,7 @@ r_release <- function(dots = TRUE) {
 #'
 #' @export
 #' @importFrom utils tail
-#' @examples
+#' @examplesIf rversions:::is_online()
 #' r_oldrel()
 
 r_oldrel <- function(dots = TRUE) {

@@ -19,5 +19,7 @@ The latest tag in the SVN repository (in terms of version numbers,
 not dates).
 }
 \examples{
+\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 r_release()
+\dontshow{\}) # examplesIf}
 }

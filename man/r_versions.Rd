@@ -22,5 +22,7 @@ major, minor and patch.
 We extract the version numbers from the tags in the SVN repository.
 }
 \examples{
+\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 r_versions()
+\dontshow{\}) # examplesIf}
 }
