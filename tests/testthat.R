@@ -1,4 +1,4 @@
 library(testthat)
 library(rversions)
 
-test_check("rversions")
+if (Sys.getenv("NOT_CRAN") == "true") test_check("rversions")
