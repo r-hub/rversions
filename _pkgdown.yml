@@ -1,5 +1,8 @@
 url: https://r-hub.github.io/rversions
 
+development:
+  mode: auto
+
 authors:
   R Consortium:
     href: "https://www.r-consortium.org/"
