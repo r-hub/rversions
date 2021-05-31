@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rversions <a href='https://r-hub.github.io/rversions'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# rversions <a href='https://r-hub.github.io/rversions/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 > Past and present R versions
 
