@@ -18,8 +18,7 @@ knitr::opts_chunk$set(
 > Past and present R versions
 
 <!-- badges: start -->
-[![Linux Build Status](https://travis-ci.org/r-hub/rversions.svg?branch=master)](https://travis-ci.org/r-hub/rversions)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-hub/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
+[![R build status](https://github.com/r-hub/rversions/workflows/R-CMD-check/badge.svg)](https://github.com/r-hub/rversions/actions)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN version](https://www.r-pkg.org/badges/version/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)

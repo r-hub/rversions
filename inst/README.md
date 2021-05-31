@@ -1,16 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rversions <a href='https://r-hub.github.io/rversions/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# rversions <a href='https://r-hub.github.io/rversions'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 > Past and present R versions
 
 <!-- badges: start -->
 
-[![Linux Build
-Status](https://travis-ci.org/r-hub/rversions.svg?branch=master)](https://travis-ci.org/r-hub/rversions)
-[![Windows Build
-status](https://ci.appveyor.com/api/projects/status/github/r-hub/rversions?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rversions)
+[![R build
+status](https://github.com/r-hub/rversions/workflows/R-CMD-check/badge.svg)](https://github.com/r-hub/rversions/actions)
 [![CRAN RStudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN
@@ -46,15 +44,15 @@ library(rversions)
 r_release()
 ```
 
-    #>     version                date                nickname
-    #> 120   4.0.3 2020-10-10 07:05:24 Bunny-Wunnies Freak Out
+    #>     version                date        nickname
+    #> 123   4.1.0 2021-05-18 07:05:22 Camp Pontanezen
 
 ``` r
 r_oldrel()
 ```
 
-    #>     version                date             nickname
-    #> 116   3.6.3 2020-02-29 08:05:16 Holding the Windsock
+    #>     version                date        nickname
+    #> 122   4.0.5 2021-03-31 07:05:15 Shake and Throw
 
 ### All R versions and release dates
 
@@ -183,6 +181,9 @@ r_versions()
     #> 118   4.0.1 2020-06-06 07:05:16           See Things Now
     #> 119   4.0.2 2020-06-22 07:05:19         Taking Off Again
     #> 120   4.0.3 2020-10-10 07:05:24  Bunny-Wunnies Freak Out
+    #> 121   4.0.4 2021-02-15 08:05:13        Lost Library Book
+    #> 122   4.0.5 2021-03-31 07:05:15          Shake and Throw
+    #> 123   4.1.0 2021-05-18 07:05:22          Camp Pontanezen
 
 ## License
 
