@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://r-hub.github.io/rversions/index.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_oldrel.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_release.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_release_macos.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_release_tarball.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_release_win.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/r_versions.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/rversions-package.html</loc>
+  </url>
+</urlset>
