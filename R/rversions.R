@@ -58,6 +58,7 @@ r_release <- function(dots = TRUE) {
 #'
 #' @keywords internal
 #' @noRd
+
 .r_oldrel_n <- function(n) {
   function(dots = TRUE) {
     versions <- r_versions(dots)
