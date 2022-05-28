@@ -1,6 +1,8 @@
 
 # rversions development version
 
+* More function to get older versions of R: `r_oldrel_1()`, `r_oldrel_2()`, `r_oldrel_3()`, `r_oldrel_4()`.
+
 # rversions 2.1.1
 
 No user visible changes.

@@ -16,10 +16,10 @@
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_find_first xml_text
 #' @examplesIf rversions:::is_online()
 #' r_versions()
-
+#'
 r_versions <- function(dots = TRUE) {
   df <- r_versions_fetch()
-  dotver <- gsub('-', '.', df$version)
+  dotver <- gsub("-", ".", df$version)
   if (dots) df$version <- dotver
 
   nicks <- cached_nicks()
@@ -48,11 +48,29 @@ r_versions <- function(dots = TRUE) {
 #' @importFrom utils tail
 #' @examplesIf rversions:::is_online()
 #' r_release()
-
+#'
 r_release <- function(dots = TRUE) {
   tail(r_versions(dots), 1)
 }
 
+
+#' Function factory to create variants of `r_oldrel()` functions
+#'
+#' @keywords internal
+#' @noRd
+.r_oldrel_n <- function(n) {
+  function(dots = TRUE) {
+    versions <- r_versions(dots)
+    version_strs <- package_version(versions$version)
+    major <- version_strs$major
+    minor <- version_strs$minor
+    major_minor <- unique(paste(major, sep = ifelse(dots, ".", "-"), minor))
+
+    latest <- tail(major_minor, n)[1]
+
+    tail(versions[versions$version < latest, ], 1)
+  }
+}
 
 #' Version number of R-oldrel
 #'
@@ -67,26 +85,38 @@ r_release <- function(dots = TRUE) {
 #' @importFrom utils tail
 #' @examplesIf rversions:::is_online()
 #' r_oldrel()
+#' r_oldrel_1()
+#' r_oldrel_2(dots = FALSE)
+#' r_oldrel_3()
+#' r_oldrel_4(dots = FALSE)
+#'
+r_oldrel <- .r_oldrel_n(1)
 
-r_oldrel <- function(dots = TRUE) {
+#' @rdname r_oldrel
+#' @export
 
-  versions <- r_versions(dots)
+r_oldrel_1 <- r_oldrel
 
-  version_strs <- package_version(versions$version)
+#' @rdname r_oldrel
+#' @export
 
-  major <- version_strs$major
-  minor <- version_strs$minor
-  major_minor <- paste(major, sep = ".", minor)
+r_oldrel_2 <- .r_oldrel_n(2)
 
-  latest <- tail(major_minor, 1)
-  tail(versions[ major_minor != latest, ], 1)
-}
+#' @rdname r_oldrel
+#' @export
+
+r_oldrel_3 <- .r_oldrel_n(3)
+
+#' @rdname r_oldrel
+#' @export
+
+r_oldrel_4 <- .r_oldrel_n(4)
 
 cache <- new.env(parent = emptyenv())
 r_versions_fetch <- function() {
   if (is.null(cache$versions)) {
     # issue http request to svn
-    h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth="1")
+    h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth = "1")
     req <- curl_fetch_memory(r_svn_url(), handle = h)
 
     # extract xml nodes

@@ -2,9 +2,21 @@
 % Please edit documentation in R/rversions.R
 \name{r_oldrel}
 \alias{r_oldrel}
+\alias{r_oldrel_1}
+\alias{r_oldrel_2}
+\alias{r_oldrel_3}
+\alias{r_oldrel_4}
 \title{Version number of R-oldrel}
 \usage{
 r_oldrel(dots = TRUE)
+
+r_oldrel_1(dots = TRUE)
+
+r_oldrel_2(dots = TRUE)
+
+r_oldrel_3(dots = TRUE)
+
+r_oldrel_4(dots = TRUE)
 }
 \arguments{
 \item{dots}{Whether to use dots instead of dashes in the version
@@ -21,5 +33,9 @@ We extract version numbers from the R SVN repository tags.
 \examples{
 \dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 r_oldrel()
+r_oldrel_1()
+r_oldrel_2(dots = FALSE) 
+r_oldrel_3() 
+r_oldrel_4(dots = FALSE) 
 \dontshow{\}) # examplesIf}
 }

@@ -28,6 +28,21 @@ test_that("r_oldrel respects dots", {
   expect_match(r_oldrel(FALSE)$version, RE_DASH)
 })
 
+test_that("r_oldrel_2 respects dots", {
+  expect_match(r_oldrel_2(TRUE)$version, RE_DOT)
+  expect_match(r_oldrel_2(FALSE)$version, RE_DASH)
+})
+
+test_that("r_oldrel_3 respects dots", {
+  expect_match(r_oldrel_3(TRUE)$version, RE_DOT)
+  expect_match(r_oldrel_3(FALSE)$version, RE_DASH)
+})
+
+test_that("r_oldrel_4 respects dots", {
+  expect_match(r_oldrel_4(TRUE)$version, RE_DOT)
+  expect_match(r_oldrel_4(FALSE)$version, RE_DASH)
+})
+
 test_that("on-demand nickname update", {
   d <- r_versions()
   nicks <- cached_nicks()
