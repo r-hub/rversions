@@ -3,3 +3,4 @@
 docs
 /revdep
 .Rhistory
+.DS_Store

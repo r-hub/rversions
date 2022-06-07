@@ -60,6 +60,8 @@ r_release <- function(dots = TRUE) {
 #' @noRd
 
 .r_oldrel_n <- function(n) {
+  force(n)
+  
   function(dots = TRUE) {
     versions <- r_versions(dots)
     version_strs <- package_version(versions$version)
