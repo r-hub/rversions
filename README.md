@@ -19,6 +19,8 @@ chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/r-hub/com
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Codecov test
+coverage](https://codecov.io/gh/r-hub/rversions/branch/master/graph/badge.svg)](https://app.codecov.io/gh/r-hub/rversions?branch=master)
 <!-- badges: end -->
 
 The R version numbers and dates are extracted from the main R SVN
@@ -43,15 +45,15 @@ library(rversions)
 r_release()
 ```
 
-    #>     version                date        nickname
-    #> 123   4.1.0 2021-05-18 07:05:22 Camp Pontanezen
+    #>     version                date          nickname
+    #> 128   4.2.1 2022-06-23 07:05:33 Funny-Looking Kid
 
 ``` r
 r_oldrel()
 ```
 
-    #>     version                date        nickname
-    #> 122   4.0.5 2021-03-31 07:05:15 Shake and Throw
+    #>     version                date    nickname
+    #> 126   4.1.3 2022-03-10 08:05:38 One Push-Up
 
 ### All R versions and release dates
 
@@ -183,6 +185,11 @@ r_versions()
     #> 121   4.0.4 2021-02-15 08:05:13        Lost Library Book
     #> 122   4.0.5 2021-03-31 07:05:15          Shake and Throw
     #> 123   4.1.0 2021-05-18 07:05:22          Camp Pontanezen
+    #> 124   4.1.1 2021-08-10 07:05:06              Kick Things
+    #> 125   4.1.2 2021-11-01 08:05:12              Bird Hippie
+    #> 126   4.1.3 2022-03-10 08:05:38              One Push-Up
+    #> 127   4.2.0 2022-04-22 07:05:41    Vigorous Calisthenics
+    #> 128   4.2.1 2022-06-23 07:05:33        Funny-Looking Kid
 
 ## License
 
