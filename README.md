@@ -7,8 +7,7 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/r-hub/rversions/workflows/R-CMD-check/badge.svg)](https://github.com/r-hub/rversions/actions)
+[![R-CMD-check](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml)
 [![CRAN RStudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN

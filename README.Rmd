@@ -18,12 +18,13 @@ knitr::opts_chunk$set(
 > Past and present R versions
 
 <!-- badges: start -->
-[![R build status](https://github.com/r-hub/rversions/workflows/R-CMD-check/badge.svg)](https://github.com/r-hub/rversions/actions)
+[![R-CMD-check](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN version](https://www.r-pkg.org/badges/version/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/r-hub/community)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Codecov test coverage](https://codecov.io/gh/r-hub/rversions/branch/master/graph/badge.svg)](https://app.codecov.io/gh/r-hub/rversions?branch=master)
 <!-- badges: end -->
 
 The R version numbers and dates are extracted from the
