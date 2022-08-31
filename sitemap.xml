@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://r-hub.github.io/rversions/404.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/authors.html</loc>
+  </url>
+  <url>
     <loc>https://r-hub.github.io/rversions/index.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://r-hub.github.io/rversions/reference/index.html</loc>
   </url>
   <url>
     <loc>https://r-hub.github.io/rversions/reference/r_oldrel.html</loc>
