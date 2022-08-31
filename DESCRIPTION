@@ -24,6 +24,7 @@ Imports:
     utils,
     xml2 (>= 1.0.0)
 Suggests:
+    covr,
     mockery,
     testthat
 Encoding: UTF-8
