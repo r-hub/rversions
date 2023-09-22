@@ -84,35 +84,38 @@ r_oldrel <- function(dots = TRUE) {
 
 cache <- new.env(parent = emptyenv())
 r_versions_fetch <- function() {
-  if (is.null(cache$versions)) {
-    # issue http request to svn
-    h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth="1")
-    req <- curl_fetch_memory(r_svn_url(), handle = h)
-
-    # extract xml nodes
-    doc <- read_xml(rawToChar(req$content))
-    prop <- xml_find_all(doc, ".//D:propstat/D:prop", xml_ns(doc))
-
-    # extract dates and tages
-    dates <- xml_text(xml_find_first(prop, ".//D:creationdate", xml_ns(doc)))
-    tags <- xml_text(xml_find_first(prop, ".//D:getetag", xml_ns(doc)))
-    tags <- sub("^.*/tags/R-([-0-9]+).*$", "\\1", tags)
-
-    # filter out working branches
-    is_release <- grepl("^[0-9]+-[0-9]+(-[0-9]+|)$", tags)
-    tags <- tags[is_release]
-    dates <- dates[is_release]
-
-    # output structure
-    versions <- data.frame(
-      stringsAsFactors = FALSE,
-      version = tags,
-      date = dates
-    )
-
-    df <- versions[order(package_version(tags)), ]
-    rownames(df) <- NULL
-    cache$versions <- df
+  if (!is.null(cache$versions)) {
+    return(cache$versions)
   }
+
+  # issue http request to svn
+  h <- handle_setheaders(new_handle(customrequest = "PROPFIND"), Depth = "1")
+  req <- curl_fetch_memory(r_svn_url(), handle = h)
+
+  # extract xml nodes
+  doc <- read_xml(rawToChar(req$content))
+  prop <- xml_find_all(doc, ".//D:propstat/D:prop", xml_ns(doc))
+
+  # extract dates and tages
+  dates <- xml_text(xml_find_first(prop, ".//D:creationdate", xml_ns(doc)))
+  tags <- xml_text(xml_find_first(prop, ".//D:getetag", xml_ns(doc)))
+  tags <- sub("^.*/tags/R-([-0-9]+).*$", "\\1", tags)
+
+  # filter out working branches
+  is_release <- grepl("^[0-9]+-[0-9]+(-[0-9]+|)$", tags)
+  tags <- tags[is_release]
+  dates <- dates[is_release]
+
+  # output structure
+  versions <- data.frame(
+    stringsAsFactors = FALSE,
+    version = tags,
+    date = dates
+  )
+
+  df <- versions[order(package_version(tags)), ]
+  rownames(df) <- NULL
+  cache$versions <- df
+
   cache$versions
 }
