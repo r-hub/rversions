@@ -23,6 +23,7 @@ version for which a macOS installer is available.
 \dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_release()
 r_release_macos()
+r_release_macos(arch = "arm64")
 \dontshow{\}) # examplesIf}
 }
 \seealso{

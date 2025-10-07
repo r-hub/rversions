@@ -15,6 +15,7 @@
 #' @examplesIf rversions:::is_online()
 #' r_release()
 #' r_release_macos()
+#' r_release_macos(arch = "arm64")
 
 r_release_macos <- function(arch = c("x86_64", "arm64")) {
   arch <- match.arg(arch)
