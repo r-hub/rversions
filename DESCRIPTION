@@ -1,7 +1,7 @@
 Package: rversions
 Title: Query 'R' Versions, Including 'r-release' and 'r-oldrel'
 Version: 2.1.2.9000
-Authors@R: 
+Authors@R:
     c(person(given = "Gábor",
              family = "Csárdi",
              role = c("aut", "cre"),
@@ -11,7 +11,9 @@ Authors@R:
              role = "ctb",
              email = "jeroen.ooms@stat.ucla.edu"),
       person(given = "R Consortium",
-             role = "fnd"))
+             role = "fnd"),
+      person("Posit Software, PBC", role = c("cph", "fnd"),
+             comment = c(ROR = "03wc8by49")))
 Description: Query the main 'R' 'SVN' repository to find the
     versions 'r-release' and 'r-oldrel' refer to, and also all previous
     'R' versions and their release dates.
