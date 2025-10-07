@@ -34,7 +34,7 @@ r_versions <- function(dots = TRUE) {
 #' r_release()
 
 r_release <- function(dots = TRUE) {
-  df <- api_version_df1("/r-release", dots)
+  df <- api_version_df1("/resolve/release", dots)
   df
 }
 

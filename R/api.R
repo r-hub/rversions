@@ -70,7 +70,7 @@ list_as_df <- function(x) {
 as_version_df <- function(df, dots = TRUE) {
   df$date <- parse_iso_8601(df$date)
   df$version <- to_dots(df$version, dots)
-  df$semver <- package_version(df$semver)
+  df$semver <- package_version(df$semver %||% df$version)
   df$URL <- df$URL %||% df$url
 
   cols <- c("version", "date", "nickname", "semver", "URL")
