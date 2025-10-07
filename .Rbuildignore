@@ -12,3 +12,4 @@
 ^.github$
 ^\.github$
 ^codecov\.yml$
+^[.]dev$
