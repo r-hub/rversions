@@ -11,11 +11,11 @@
 #'
 #' @family R downloads
 #' @export
-#' @importFrom curl new_handle handle_setopt
 #' @examplesIf rversions:::is_online()
 #' r_release()
 #' r_release_win()
 
 r_release_win <- function() {
-  keep_head(r_win_download_url(), "-win.exe")
+  df <- api_version_df1("r-release-win")
+  df
 }
