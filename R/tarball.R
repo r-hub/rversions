@@ -11,11 +11,11 @@
 #'
 #' @export
 #' @family R downloads
-#' @importFrom curl new_handle handle_setopt
 #' @examplesIf rversions:::is_online()
 #' r_release()
 #' r_release_tarball()
 
 r_release_tarball <- function() {
-  keep_head(r_download_url(), ".tar.gz")
+  df <- api_version_df1("r-release-tarball")
+  df
 }

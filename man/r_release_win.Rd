@@ -17,7 +17,7 @@ is available for download. \code{r_release_win} returns the latest
 version for which a Windows installer is available.
 }
 \examples{
-\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_release()
 r_release_win()
 \dontshow{\}) # examplesIf}

@@ -4,7 +4,10 @@
 \alias{r_release_macos}
 \title{Latest R release with a macOS installer available for download}
 \usage{
-r_release_macos()
+r_release_macos(arch = c("x86_64", "arm64"))
+}
+\arguments{
+\item{arch}{The architecture, either \sQuote{x86_64} or \sQuote{arm64}.}
 }
 \value{
 A one row data frame, with columns \sQuote{version},
@@ -17,9 +20,10 @@ is available for download. \code{r_release_macos} returns the latest
 version for which a macOS installer is available.
 }
 \examples{
-\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_release()
 r_release_macos()
+r_release_macos(arch = "arm64")
 \dontshow{\}) # examplesIf}
 }
 \seealso{

@@ -30,6 +30,7 @@ Other contributors:
 \itemize{
   \item Jeroen Ooms \email{jeroen.ooms@stat.ucla.edu} [contributor]
   \item R Consortium [funder]
+  \item Posit Software, PBC (\href{https://ror.org/03wc8by49}{ROR}) [copyright holder, funder]
 }
 
 }

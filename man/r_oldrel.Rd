@@ -19,7 +19,7 @@ R-oldrel is the latest version of the previous minor version.
 We extract version numbers from the R SVN repository tags.
 }
 \examples{
-\dontshow{if (rversions:::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_oldrel()
 \dontshow{\}) # examplesIf}
 }
