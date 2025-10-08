@@ -16,7 +16,7 @@
 #' r_versions()
 
 r_versions <- function(dots = TRUE) {
-  df <- api_version_df("/r-versions", dots)
+  df <- api_version_df("r-versions", dots)
   df
 }
 
@@ -34,7 +34,7 @@ r_versions <- function(dots = TRUE) {
 #' r_release()
 
 r_release <- function(dots = TRUE) {
-  df <- api_version_df1("/resolve/release", dots)
+  df <- api_version_df1("resolve/release", dots)
   df
 }
 
@@ -52,6 +52,6 @@ r_release <- function(dots = TRUE) {
 #' r_oldrel()
 
 r_oldrel <- function(dots = TRUE) {
-  df <- api_version_df1("/r-oldrel", dots)
+  df <- api_version_df1("r-oldrel", dots)
   df
 }

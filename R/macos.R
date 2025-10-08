@@ -21,8 +21,8 @@ r_release_macos <- function(arch = c("x86_64", "arm64")) {
   arch <- match.arg(arch)
   ep <- switch(
     arch,
-    x86_64 = "/r-release-macos",
-    arm64 = "/r-release-macos-arm64",
+    x86_64 = "r-release-macos",
+    arm64 = "r-release-macos-arm64",
     stop("Unknown architecture: ", arch)
   )
   df <- api_version_df1(ep)
