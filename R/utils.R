@@ -6,6 +6,10 @@
   if (!is.null(a)) b else NULL
 }
 
+`%|NA|%` <- function(a, b) {
+  ifelse(is.na(a), b, a)
+}
+
 is_rcmd_check <- function() {
   if (identical(Sys.getenv("NOT_CRAN"), "true")) {
     FALSE
@@ -21,4 +25,12 @@ is_online <- function() {
 
 is_string <- function(x) {
   is.character(x) && length(x) == 1 && !is.na(x)
+}
+
+vcapply <- function(x, fun, ...) {
+  vapply(x, fun, character(1), ...)
+}
+
+vlapply <- function(x, fun, ...) {
+  vapply(x, fun, logical(1), ...)
 }

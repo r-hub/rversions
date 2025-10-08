@@ -38,6 +38,9 @@ api_version_df <- function(endpoint, dots = TRUE) {
     if (is.null(x$nickname)) {
       x$nickname <- NA_character_
     }
+    if (is.null(x$date)) {
+      x$date <- NA_character_
+    }
     x
   })
 
@@ -61,7 +64,12 @@ api_version_df1 <- function(endpoint, dots = TRUE) {
   df
 }
 
+null_to_na <- function(x) {
+  x[] <- lapply(x, function(y) if (is.null(y)) NA else y)
+}
+
 list_as_df <- function(x) {
+  x <- lapply(x, null_to_na)
   df <- do.call(rbind.data.frame, x)
   df <- as_data_frame(df)
   df
@@ -73,7 +81,7 @@ as_version_df <- function(df, dots = TRUE) {
   df$semver <- package_version(df$semver %||% df$version)
   df$URL <- df$URL %||% df$url
 
-  cols <- c("version", "date", "nickname", "semver", "URL")
+  cols <- c("version", "date", "nickname", "semver", "URL", "type", "rtools_url")
   df <- df[intersect(cols, names(df))]
 
   rownames(df) <- NULL
