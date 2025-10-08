@@ -18,6 +18,25 @@ A one row data frame, with columns \sQuote{version},
 The latest tag in the SVN repository (in terms of version numbers,
 not dates).
 }
+\section{Note}{
+
+This function is superseded by \code{\link[=resolve]{resolve()}}:
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{r_release()
+#> # A data frame: 1 x 6
+#>   version date                nickname          semver     URL             type 
+#>   <chr>   <dttm>              <chr>             <pckg_vrs> <chr>           <chr>
+#> 1 4.5.1   2025-06-13 07:12:01 Great Square Root 4.5.1      https://cran.r~ rele~
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{resolve("release", platform = NA)
+#> # A data frame: 1 x 6
+#>   version date                nickname          semver     url             type 
+#>   <chr>   <dttm>              <chr>             <pckg_vrs> <chr>           <chr>
+#> 1 4.5.1   2025-06-13 07:12:01 Great Square Root 4.5.1      https://cran.r~ rele~
+}\if{html}{\out{</div>}}
+}
+
 \examples{
 \dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_release()

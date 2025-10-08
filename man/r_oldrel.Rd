@@ -18,6 +18,25 @@ A one row data frame, with columns \sQuote{version},
 R-oldrel is the latest version of the previous minor version.
 We extract version numbers from the R SVN repository tags.
 }
+\section{Note}{
+
+This function is superseded by \code{\link[=resolve]{resolve()}}:
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{r_oldrel()
+#> # A data frame: 1 x 5
+#>   version date                nickname    semver     URL                        
+#>   <chr>   <dttm>              <chr>       <pckg_vrs> <chr>                      
+#> 1 4.4.3   2025-02-28 08:08:59 Trophy Case 4.4.3      https://cran.rstudio.com/s~
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{resolve("oldrel", platform = NA)
+#> # A data frame: 1 x 6
+#>   version date                nickname    semver     url                   type 
+#>   <chr>   <dttm>              <chr>       <pckg_vrs> <chr>                 <chr>
+#> 1 4.4.3   2025-02-28 08:08:59 Trophy Case 4.4.3      https://cran.rstudio~ oldr~
+}\if{html}{\out{</div>}}
+}
+
 \examples{
 \dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_oldrel()

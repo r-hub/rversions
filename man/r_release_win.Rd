@@ -16,6 +16,25 @@ repository. However, an SVN tag does not mean that the same version
 is available for download. \code{r_release_win} returns the latest
 version for which a Windows installer is available.
 }
+\section{Note}{
+
+This function is superseded by \code{\link[=resolve]{resolve()}}:
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{r_release_win()
+#> # A data frame: 1 x 5
+#>   version date                nickname          semver     URL                  
+#>   <chr>   <dttm>              <chr>             <pckg_vrs> <chr>                
+#> 1 4.5.1   2025-06-13 07:12:01 Great Square Root 4.5.1      https://cran.rstudio~
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{resolve("release", platform = "windows")
+#> # A data frame: 1 x 7
+#>   version date                nickname          semver    url   type  rtools_url
+#>   <chr>   <dttm>              <chr>             <pckg_vr> <chr> <chr> <chr>     
+#> 1 4.5.1   2025-06-13 07:12:01 Great Square Root 4.5.1     http~ rele~ https://g~
+}\if{html}{\out{</div>}}
+}
+
 \examples{
 \dontshow{if (rversions:::is_online()) withAutoprint(\{ # examplesIf}
 r_release()

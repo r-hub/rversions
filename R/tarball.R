@@ -6,6 +6,15 @@
 #' is available for download. `r_release_tarball` returns the latest
 #' version for which a source tarball is available.
 #'
+#' @section Note:
+#' This function is superseded by [resolve()]:
+#' ```{r}
+#' r_release_tarball()
+#' ```
+#' ```{r}
+#' resolve("release", platform = NA)
+#' ```
+#'
 #' @return A one row data frame, with columns \sQuote{version},
 #'   \sQuote{date}, \sQuote{URL} and \sQuote{nickname}.
 #'

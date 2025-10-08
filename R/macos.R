@@ -6,6 +6,15 @@
 #' is available for download. `r_release_macos` returns the latest
 #' version for which a macOS installer is available.
 #'
+#' @section Note:
+#' This function is superseded by [resolve()]:
+#' ```{r}
+#' r_release_macos()
+#' ```
+#' ```{r}
+#' resolve("release", platform = "macos")
+#' ```
+#'
 #' @param arch The architecture, either \sQuote{x86_64} or \sQuote{arm64}.
 #' @return A one row data frame, with columns \sQuote{version},
 #'   \sQuote{date}, \sQuote{URL} and \sQuote{nickname}.

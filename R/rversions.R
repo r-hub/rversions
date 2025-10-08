@@ -29,6 +29,15 @@ r_versions <- function(dots = TRUE) {
 #' @return A one row data frame, with columns \sQuote{version},
 #'   \sQuote{date} and \sQuote{nickname}.
 #'
+#' @section Note:
+#' This function is superseded by [resolve()]:
+#' ```{r}
+#' r_release()
+#' ```
+#' ```{r}
+#' resolve("release", platform = NA)
+#' ```
+#'
 #' @export
 #' @examplesIf rversions:::is_online()
 #' r_release()
@@ -42,6 +51,15 @@ r_release <- function(dots = TRUE) {
 #'
 #' R-oldrel is the latest version of the previous minor version.
 #' We extract version numbers from the R SVN repository tags.
+#'
+#' @section Note:
+#' This function is superseded by [resolve()]:
+#' ```{r}
+#' r_oldrel()
+#' ```
+#' ```{r}
+#' resolve("oldrel", platform = NA)
+#' ```
 #'
 #' @inheritParams r_versions
 #' @return A one row data frame, with columns \sQuote{version},

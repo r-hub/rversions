@@ -6,6 +6,15 @@
 #' is available for download. `r_release_win` returns the latest
 #' version for which a Windows installer is available.
 #'
+#' @section Note:
+#' This function is superseded by [resolve()]:
+#' ```{r}
+#' r_release_win()
+#' ```
+#' ```{r}
+#' resolve("release", platform = "windows")
+#' ```
+#'
 #' @return A one row data frame, with columns \sQuote{version},
 #'   \sQuote{date}, \sQuote{URL} and \sQuote{nickname}.
 #'
