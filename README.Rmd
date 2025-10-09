@@ -29,8 +29,8 @@ The R version numbers and dates are queried from R-hub's
 [R version API](https://api.r-hub.io/rversions/).
 
 `rversions` is in particular useful for determining at any given moment
-what versions "R-release" and "R-oldrel" refer to. This is useful for e.g.
-[R-hub](https://docs.r-hub.io/).
+what versions "R-release" and "R-oldrel" refer to, and what R builds are
+available for a given platform.
 
 ## Installation
 
