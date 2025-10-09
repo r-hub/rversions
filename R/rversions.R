@@ -1,4 +1,3 @@
-
 #' Query R's past and present versions
 #'
 #' R version numbers consist of three numbers (since version 1.4.1):

@@ -1,4 +1,3 @@
-
 #' Latest R release with a Windows installer available for download
 #'
 #' [r_release()] works based on the SVN tags in the main R source code

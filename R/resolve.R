@@ -47,20 +47,24 @@ resolve <- function(
 }
 
 dox_platform_values <- function(na = TRUE) {
-  paste0(collapse = "\n", "* ", c(
-   if (na) {
-    "`NA`: to get information about platform-independent release archives."
-   },
-   "`windows`: x86_64 Windows.",
-   "`windows-x86_64`: the same.",
-   "`windows-aarch64`: aarch64 Windows.",
-   "`macos`: arm64 macOS.",
-   "`macos-arm64`: the same.",
-   "`macos-x86_64`: x86_64 macOS.",
-   "`linux-<distro>-<release>`: x86_64 Linux on the given distribution
+  paste0(
+    collapse = "\n",
+    "* ",
+    c(
+      if (na) {
+        "`NA`: to get information about platform-independent release archives."
+      },
+      "`windows`: x86_64 Windows.",
+      "`windows-x86_64`: the same.",
+      "`windows-aarch64`: aarch64 Windows.",
+      "`macos`: arm64 macOS.",
+      "`macos-arm64`: the same.",
+      "`macos-x86_64`: x86_64 macOS.",
+      "`linux-<distro>-<release>`: x86_64 Linux on the given distribution
      and release, e.g. `linux-ubuntu-22.04`.",
-   "A target triplet of the form `cpu-vendor-os-abi`. On Linux it should
+      "A target triplet of the form `cpu-vendor-os-abi`. On Linux it should
      also include the distribution name and release. See
      [current_r_platform()] for examples."
-  ))
+    )
+  )
 }

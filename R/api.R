@@ -11,8 +11,10 @@ version_api_url <- function() {
 #' @importFrom curl curl_fetch_memory
 
 api <- function(endpoint) {
-  if (!is.null(value <- cache[[endpoint]]) &&
-      Sys.time() - value$time < cache_timeout()) {
+  if (
+    !is.null(value <- cache[[endpoint]]) &&
+      Sys.time() - value$time < cache_timeout()
+  ) {
     return(value$value)
   }
 
@@ -81,7 +83,15 @@ as_version_df <- function(df, dots = TRUE) {
   df$semver <- package_version(df$semver %||% df$version)
   df$URL <- df$URL %||% df$url
 
-  cols <- c("version", "date", "nickname", "semver", "URL", "type", "rtools_url")
+  cols <- c(
+    "version",
+    "date",
+    "nickname",
+    "semver",
+    "URL",
+    "type",
+    "rtools_url"
+  )
   df <- df[intersect(cols, names(df))]
 
   rownames(df) <- NULL

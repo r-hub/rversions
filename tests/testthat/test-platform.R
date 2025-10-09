@@ -61,7 +61,9 @@ test_that("current_r_platform_data_linux", {
 
   nlapply <- function(X, FUN, ...) {
     ret <- lapply(X, FUN, ...)
-    if (is.character(X) && is.null(names(ret))) names(ret) <- X
+    if (is.character(X) && is.null(names(ret))) {
+      names(ret) <- X
+    }
     ret
   }
 

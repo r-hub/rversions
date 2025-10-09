@@ -14,3 +14,5 @@
 ^codecov\.yml$
 ^[.]dev$
 ^[.]covrignore$
+^[.]?air[.]toml$
+^\.vscode$

@@ -15,7 +15,9 @@ is_rcmd_check <- function() {
 }
 
 is_online <- function() {
-  if (is_rcmd_check()) return(FALSE)
+  if (is_rcmd_check()) {
+    return(FALSE)
+  }
   tolower(Sys.getenv("R_OFFLINE")) != "true"
 }
 

@@ -5,7 +5,8 @@ os_from_platform <- function(platform, na = TRUE) {
 
   psd <- parse_platform(platform)
 
-  os <- switch(platform,
+  os <- switch(
+    platform,
     "windows" = "windows",
     "windows-x86_64" = "windows",
     "windows-aarch64" = "windows",
@@ -35,7 +36,8 @@ arch_from_platform <- function(platform, na = TRUE) {
     return(NA_character_)
   }
 
-  arch <- switch(platform,
+  arch <- switch(
+    platform,
     "windows" = "x86_64",
     "windows-x86_64" = "x86_64",
     "windows-aarch64" = "aarch64",

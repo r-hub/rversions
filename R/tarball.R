@@ -1,4 +1,3 @@
-
 #' Latest release for which a source tarball is available for download
 #'
 #' [r_release()] works based on the SVN tags in the main R source code
