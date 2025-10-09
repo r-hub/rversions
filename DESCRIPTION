@@ -1,6 +1,6 @@
 Package: rversions
 Title: Query 'R' Versions, Including 'r-release' and 'r-oldrel'
-Version: 3.0.0
+Version: 3.0.0.9000
 Authors@R:
     c(person(given = "Gábor",
              family = "Csárdi",
