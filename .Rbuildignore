@@ -17,3 +17,4 @@
 ^[.]covrignore$
 ^[.]?air[.]toml$
 ^\.vscode$
+^docs$

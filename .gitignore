@@ -1,6 +1,6 @@
 /tags
 .Rproj.user
-docs
+/docs
 /revdep
 .DS_Store
 /.dev
