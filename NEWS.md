@@ -1,5 +1,21 @@
-
 # development version
+
+rversions now uses R-hub's [R version API](https://api.r-hub.io/rversions).
+The `r_oldrel()`, `r_release()`, `r_release_macos()`, `r_release_tarball()`,
+and `r_release_win()` functions are now superseded by the new `resolve()`
+function, see their manual pages.
+
+* New function `resolve()` to resolve an R version specification.
+
+* New function `available()` to list available R builds for a platform.
+
+* New function `linux_distros()` to list Linux distributions supported
+  by Posit or R-hub.
+
+* New function `rtools_versions()` to list Rtools versions.
+
+* New utility function `current_r_platform()` to look up the current
+  platform, including the distribution and release on Linux.
 
 # rversions 2.1.2
 
