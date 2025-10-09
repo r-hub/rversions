@@ -1,42 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://r-hub.github.io/rversions/404.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_oldrel.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_release.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_release_macos.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_release_tarball.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_release_win.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/r_versions.html</loc>
-  </url>
-  <url>
-    <loc>https://r-hub.github.io/rversions/reference/rversions-package.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://r-hub.github.io/rversions/404.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/LICENSE-text.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/authors.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/index.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/news/index.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/available.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/current_r_platform.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/index.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/linux_distros.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_oldrel.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_release.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_release_macos.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_release_tarball.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_release_win.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/r_versions.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/resolve.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/rtools_versions.html</loc></url>
+<url><loc>https://r-hub.github.io/rversions/reference/rversions-package.html</loc></url>
 </urlset>
+
