@@ -1,7 +1,7 @@
 ---
 output:
   github_document:
-    html_preview: false
+always_allow_html: yes
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,18 +19,18 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-hub/rversions/actions/workflows/R-CMD-check.yaml)
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/rversions)](https://r-pkg.org/pkg/rversions)
 [![CRAN version](https://www.r-pkg.org/badges/version/rversions)](https://r-pkg.org/pkg/rversions)
-[![CRAN checks](https://cranchecks.info/badges/summary/rversions)](https://cran.r-project.org/web/checks/check_results_rversions.html)
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/r-hub/community)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Codecov test coverage](https://codecov.io/gh/r-hub/rversions/branch/master/graph/badge.svg)](https://app.codecov.io/gh/r-hub/rversions?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/r-hub/rversions/graph/badge.svg)](https://app.codecov.io/gh/r-hub/rversions)
 <!-- badges: end -->
 
-The R version numbers and dates are extracted from the
-main R SVN repository at https://svn.r-project.org/R/.
+The R version numbers and dates are queried from R-hub's
+[R version API](https://api.r-hub.io/rversions/).
 
-`rversions` is in particular useful for determining at any given moment what versions "R-release" and "R-oldrel" refer to. This is useful for e.g. [R-hub](https://docs.r-hub.io/).
+`rversions` is in particular useful for determining at any given moment
+what versions "R-release" and "R-oldrel" refer to. This is useful for e.g.
+[R-hub](https://docs.r-hub.io/).
 
 ## Installation
 
@@ -40,21 +40,75 @@ install.packages("rversions")
 
 ## Usage
 
-### R-release and R-oldrel
-
-```{r}
+```{r include = FALSE}
 library(rversions)
-r_release()
-r_oldrel()
+loadNamespace("pillar")
 ```
 
-### All R versions and release dates
+### List all R releases
 
 ```{r}
 r_versions()
 ```
 
+### List available R builds
+
+For the current platform:
+
+```{r}
+available()
+```
+
+For another platform:
+
+```{r}
+available("windows")
+```
+
+### Resolve R version specifications
+
+Current R release:
+
+```{r}
+resolve("release")
+```
+
+Development version:
+
+```{r}
+resolve("devel")
+```
+
+Next version of R:
+
+```{r}
+resolve("next")
+```
+
+Previous release:
+
+```{r}
+resolve("oldrel")
+```
+
+Last release of a branch:
+
+```{r}
+resolve("4.2")
+```
+
+### List of Rtools versions
+
+```{r}
+rtools_versions()
+```
+
+### Linux distros supported by Posit, or R-hub
+
+```{r}
+linux_distros()
+```
 
 ## License
 
-MIT © [Gábor Csárdi](https://github.com/gaborcsardi)
+MIT © [Gábor Csárdi](https://github.com/gaborcsardi), [Posit Software, PBC](https://posit.co)
