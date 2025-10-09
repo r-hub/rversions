@@ -46,6 +46,8 @@ resolve <- function(
   df
 }
 
+# nocov start
+
 dox_platform_values <- function(na = TRUE) {
   paste0(
     collapse = "\n",
@@ -68,3 +70,5 @@ dox_platform_values <- function(na = TRUE) {
     )
   )
 }
+
+# nocov end

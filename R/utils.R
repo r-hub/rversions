@@ -32,3 +32,7 @@ vcapply <- function(x, fun, ...) {
 vlapply <- function(x, fun, ...) {
   vapply(x, fun, logical(1), ...)
 }
+
+mkdirp <- function(x) {
+  dir.create(x, showWarnings = FALSE, recursive = TRUE)
+}

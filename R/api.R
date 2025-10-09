@@ -41,7 +41,9 @@ api_version_df <- function(endpoint, dots = TRUE) {
       x$nickname <- NA_character_
     }
     if (is.null(x$date)) {
+      # nocov start
       x$date <- NA_character_
+      # nocov end
     }
     x
   })

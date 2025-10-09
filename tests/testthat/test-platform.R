@@ -157,3 +157,9 @@ test_that("platform with flavors", {
   expect_snapshot(current_r_platform_data())
   expect_snapshot(current_r_platform())
 })
+
+test_that("get_platform", {
+  fake(get_platform, "forced_platform", "forced")
+  expect_equal(get_platform(), "forced")
+  expect_equal(get_platform(forced = FALSE), R.version$platform)
+})

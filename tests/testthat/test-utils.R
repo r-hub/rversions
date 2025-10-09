@@ -53,3 +53,11 @@ test_that("vlapply", {
   x <- list(a = 1L, b = "2")
   expect_equal(vlapply(x, is.numeric), c(a = TRUE, b = FALSE))
 })
+
+test_that("mkdirp", {
+  tmp <- file.path(tempfile(), "foo", "bar")
+  on.exit(unlink(tmp, recursive = TRUE), add = TRUE)
+  mkdirp(tmp)
+  expect_true(file.exists(tmp))
+  expect_silent(mkdirp(tmp))
+})
