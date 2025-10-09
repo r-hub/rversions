@@ -2,10 +2,6 @@
   if (!is.null(a)) a else b
 }
 
-`%&&%` <- function(a, b) {
-  if (!is.null(a)) b else NULL
-}
-
 `%|NA|%` <- function(a, b) {
   ifelse(is.na(a), b, a)
 }

@@ -24,8 +24,10 @@ BugReports: https://github.com/r-hub/rversions/issues
 Imports:
     curl
 Suggests:
-    mockery,
-    testthat
+    pillar,
+    testthat (>= 3.0.0),
+    withr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+Config/testthat/edition: 3
