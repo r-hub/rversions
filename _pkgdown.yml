@@ -10,15 +10,23 @@ authors:
 
 
 reference:
-- title: Version labels
-  desc: ~
+
+- title: R version and build information
   contents:
-  - '`r_oldrel`'
-  - '`r_release`'
-  - '`r_release_macos`'
-  - '`r_release_tarball`'
-  - '`r_release_win`'
-- title: All R versions
-  desc: ~
+  - available
+  - linux_distros
+  - r_versions
+  - resolve
+  - rtools_versions
+
+- title: Utility functions
   contents:
-  - '`r_versions`'
+  - current_r_platform
+
+- title: Superseded functions
+  contents:
+  - r_oldrel
+  - r_release
+  - r_release_macos
+  - r_release_tarball
+  - r_release_win
