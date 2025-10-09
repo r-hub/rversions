@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rversions</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">2.1.2.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">3.0.0.9000</span>
       </span>
     </div>
 
@@ -47,6 +47,18 @@
       <small>Source: <a href="https://github.com/r-hub/rversions/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="page-header" data-toc-text="development version" id="rversions-development-version">rversions (development version)<a class="anchor" aria-label="anchor" href="#rversions-development-version"></a></h2>
+</div>
+    <div class="section level2">
+<h2 class="page-header" data-toc-text="3.0.0" id="rversions-300">rversions 3.0.0<small>2025-10-09</small><a class="anchor" aria-label="anchor" href="#rversions-300"></a></h2>
+<p>rversions now uses R-hub’s <a href="https://api.r-hub.io/rversions" class="external-link">R version API</a>. The <code><a href="../reference/r_oldrel.html">r_oldrel()</a></code>, <code><a href="../reference/r_release.html">r_release()</a></code>, <code><a href="../reference/r_release_macos.html">r_release_macos()</a></code>, <code><a href="../reference/r_release_tarball.html">r_release_tarball()</a></code>, and <code><a href="../reference/r_release_win.html">r_release_win()</a></code> functions are now superseded by the new <code><a href="../reference/resolve.html">resolve()</a></code> function, see their manual pages.</p>
+<ul><li><p>New function <code><a href="../reference/resolve.html">resolve()</a></code> to resolve an R version specification.</p></li>
+<li><p>New function <code><a href="../reference/available.html">available()</a></code> to list available R builds for a platform.</p></li>
+<li><p>New function <code><a href="../reference/linux_distros.html">linux_distros()</a></code> to list Linux distributions supported by Posit or R-hub.</p></li>
+<li><p>New function <code><a href="../reference/rtools_versions.html">rtools_versions()</a></code> to list Rtools versions.</p></li>
+<li><p>New utility function <code><a href="../reference/current_r_platform.html">current_r_platform()</a></code> to look up the current platform, including the distribution and release on Linux.</p></li>
+</ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="2.1.2" id="rversions-212">rversions 2.1.2<small>2022-08-31</small><a class="anchor" aria-label="anchor" href="#rversions-212"></a></h2>
 <p>No user visible changes.</p>
