@@ -1,4 +1,4 @@
-# development version
+# rversions 3.0.0
 
 rversions now uses R-hub's [R version API](https://api.r-hub.io/rversions).
 The `r_oldrel()`, `r_release()`, `r_release_macos()`, `r_release_tarball()`,
