@@ -26,6 +26,7 @@ Imports:
 Suggests:
     pillar,
     testthat (>= 3.0.0),
+    webfakes,
     withr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
